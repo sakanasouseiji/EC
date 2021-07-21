@@ -1,0 +1,58 @@
+array (
+  0 => 'lis_mk">ルイガノ</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0503202101037&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  1 => 'lis_nm">ルイガノ ミニベロ 電動自転車 アシスト自転車 コンパクト イーゼル-E LOUIS GARNEAU 20インチ 8段変速  21 EASEL-E</span>',
+  2 => 'priceB2\'><span class="priceNumeric">217,800</span>',
+  3 => 'lis_mk">ミズタニ自転車</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0427201817013&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  4 => 'lis_nm">店頭受取限定 セラフ e-バイク e-bike スポーツ 電動自転車 電動アシスト Seraph 10段変速 スポーツ車大特価 Seraph</span>',
+  5 => 'priceB2\'><span class="priceNumeric">219,780</span>',
+  6 => 'lis_mk">パナソニック</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0404180514010&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  7 => 'lis_nm">店頭受取限定 パナソニック e-バイク e-bike スポーツ 電動自転車 電動アシスト XU1 2018 Panasonic BE-EXU44</span>',
+  8 => 'priceB2\'><span class="priceNumeric">247,500</span>',
+  9 => 'lis_mk">ベスビー</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0433180701052&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  10 => 'lis_nm">店頭受取限定 ベスビー Eバイク スポーツ 電動自転車 電動アシスト JF1 BESV 7Ah 10段変速 JF1</span>',
+  11 => 'priceB2\'><span class="priceNumeric">253,000</span>',
+  12 => 'lis_mk">ルイガノ</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0503202102010&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  13 => 'lis_nm">ルイガノ ミニベロ 電動自転車 アシスト自転車 コンパクト イーゼル INTER5E Di2 LOUIS GARNEAU 20インチ 5段変速  21 EASEL INTER5E Di2</span>',
+  14 => 'priceB2\'><span class="priceNumeric">272,800</span>',
+  15 => 'lis_mk">tern</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0411201915015&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  16 => 'lis_nm">店頭受取限定 アウトレットセール ターン ミニベロ 電動自転車 アシスト自転車 コンパクト マット ブラック 20インチ 2019 Vektron tern 通勤通学におすすめ電動 19 Vektron</span>',
+  17 => 'priceB2\'><span class="priceNumeric">296,780</span>',
+  18 => 'lis_mk">ベスビー</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0433180702059&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  19 => 'lis_nm">店頭受取限定 ベスビー Eバイク スポーツ 電動自転車 電動アシスト JR1 BESV 7Ah 11段変速 JR1</span>',
+  20 => 'priceB2\'><span class="priceNumeric">303,600</span>',
+  21 => 'lis_mk">JEEP</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0442190601016&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  22 => 'lis_nm">店頭受取限定 ジープ e-バイク e-bike スポーツ 電動自転車 電動アシスト 27.5インチ 2019 JE-279E JEEP 11.6Ah 9段変速 19 JE-279E</span>',
+  23 => 'priceB2\'><span class="priceNumeric">327,800</span>',
+  24 => 'lis_mk">ネスト</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0444202139012&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  25 => 'lis_nm">ネスト Eバイク スポーツ 電動自転車 電動アシスト X-VALLEY E6180 NESTO 27インチ 11.6Ah 10段変速 NE-20-017</span>',
+  26 => 'priceB2\'><span class="priceNumeric">328,900</span>',
+  27 => 'lis_mk">ミヤタサイクル</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0406190904034&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  28 => 'lis_nm">ミヤタサイクル Eバイク スポーツ 電動自転車 電動アシスト 2020 ロードレックス 6180 ミヤタ MIYATA 11.6Ah 10段変速 VRR61xxx</span>',
+  29 => 'priceB2\'><span class="priceNumeric">328,900</span>',
+  30 => 'lis_mk">パナソニック</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0404200902018&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  31 => 'lis_nm">パナソニック Eバイク スポーツ 電動自転車 電動アシスト マットチャコールブラック XM2 Panasonic 27.5インチ 12.0Ah 外装22段 BE-EWM240</span>',
+  32 => 'priceB2\'><span class="priceNumeric">426,800</span>',
+  33 => 'lis_mk">DAVOS</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0452201901011&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  34 => 'lis_nm">店頭受取限定 ダボス e-バイク e-bike スポーツ 電動自転車 電動アシスト 700C DAVOS 10段変速 DAVOS E-600</span>',
+  35 => 'priceB2\'><span class="priceNumeric">473,000</span>',
+  36 => 'lis_mk">BESV</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0433180302013&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  37 => 'lis_nm">店頭受取限定 ベスビー e-バイク e-bike スポーツ 電動自転車 電動アシスト 27.5インチ TRS1 BESV 11段変速 TRS1</span>',
+  38 => 'priceB2\'><span class="priceNumeric">508,200</span>',
+  39 => 'lis_mk">パナソニック</span>
+                <a href=\'/store/ProductDetail.aspx?pcd=0404200712013&ccd=F1000518&wkcd=F1000510\' onclick=\'\' class="sclistanc',
+  40 => 'lis_nm">パナソニック Eバイク スポーツ 電動自転車 電動アシスト シルバー XM-D2V Panasonic 12.0Ah BE-EWMD242</span>',
+  41 => 'priceB2\'><span class="priceNumeric">701,800</span>',
+)

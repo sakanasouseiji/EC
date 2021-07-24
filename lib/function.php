@@ -1,6 +1,6 @@
 <?php
 
-//スクレイピング価格データををcsv形式で吐き出す
+//スクレイピング価格データをcsv形式で吐き出す
 //classにしているのはrequire_onceで先頭に並べたいだけ
 class	putKakaku{
 	public	$filename;
@@ -24,4 +24,19 @@ class	putKakaku{
 	return $result;
 	}
 }
+
+//resultを受け取ってdocumentExtractionクラス(抜き出し、置き換え)でできない修正をする(要は細かいつじつま合わせ)
+class	smallModification{
+	public	$baseUrl;	//baseUrl
+	//urlの修正
+	function	baseUrlMod(){
+		$baseUrl=$this->baseUrl;
+		if(	!is_array($baseUrl)	&&	!isset($baseUrl[0])	&&	!isset($baseUrl[1])	){	//配列かつ要素がじゃなかったらfalse返して終了
+			return	false;
+		}
+		$changeUrlNamme=$baseUrl[0];	
+		$addUrl=$baseUrl[1];
+	
+}
+
 ?>

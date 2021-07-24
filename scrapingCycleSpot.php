@@ -16,7 +16,10 @@ $ECsiteList=array(
 	"CycleSpot"=>array(		//サイクルスポット
 		"Name"=>"CycleSpot",	//サイト名
 		"Url"=>"https://cyclespot.jp/store/CategoryList.aspx?ccd=F1000518&wkcd=F1000510&SKEY=price&SORDER=0&page=",	//スクレイピングするurl
-		"baseUrl"=>"https://cyclespot.jp",	//ベースurl,取得したurlに足す。必要ない場合はfalseもしくはnull
+		"baseUrl"=>array(
+			"href",					//変更したいurlの配列添字
+			"https://cyclespot.jp"	//ベースurl,取得したurlに足す。必要ない場合はfalseもしくはnull
+		),
 		"startPageNo"=>"0",	//最初のページナンバー
 		"FileName"=>"CycleSpot.html",	//吐き出すファイル名
 		"outlinePattern"=>"/並び順.[\s\S]*?pagination/iu",	//アウトラインパターン
@@ -76,6 +79,12 @@ foreach($ECsiteList as $EC){
 			$result=array_merge($result,$pageResult);
 		}
 	}while(	$subject!==false	);
+
+	foreach($result
+
+
+
+
 
 	//csv形式での出力
 	$putKakaku->filename=$EC["Name"]."Result.csv";

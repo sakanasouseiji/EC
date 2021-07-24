@@ -198,7 +198,7 @@ class	DocumentExtraction{
 		foreach($index as $i => $key){
 
 			if(	$flag==$key	&&	$i!=0	){
-				print_r($array);
+				//print_r($array);
 				$result[$pointa]=$array;
 				$array=array();
 				++$pointa;

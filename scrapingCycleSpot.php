@@ -1,6 +1,7 @@
 <?php
 
 require_once("./lib/scraping.php");
+require_once("./lib/function.php");
 //スクレイピングの実行サンプル。例としてサイクルスポットを使う
 //備忘録
 //サイトurlを指定してスクレイピング
@@ -44,6 +45,7 @@ $ECsiteList=array(
 
 $scraping=new scraping();
 $documentExtraction=new DocumentExtraction();
+$putKakaku=new putKakaku();
 $result=array();
 
 
@@ -52,7 +54,7 @@ foreach($ECsiteList as $EC){
 
 	//一覧ページ(アウトラインもしくはディティールでfalseが出たらページ終了と判断して終わり)
 	do{
-		print $EC["Url"].$EC["startPageNo"];
+		print $EC["Url"].$EC["startPageNo"]."\n";
 		$scraping->url=$EC["Url"].$EC["startPageNo"];
 		$documentExtraction->subject=$scraping->go();
 		$documentExtraction->outlinePattern=$EC["outlinePattern"];
@@ -63,16 +65,23 @@ foreach($ECsiteList as $EC){
 		$documentExtraction->replacement=$EC["replacement"];
 		$subject=$documentExtraction->get();
 		$pageResult=$subject;
+		/*
 		print "<pre>";
 		//print_r($pageResult);
 
 		print "</pre>";
+		 */
 		++$EC["startPageNo"];
 		if(	$pageResult!==false	){
 			$result=array_merge($result,$pageResult);
 		}
 	}while(	$subject!==false	);
-	file_put_contents($EC["Name"]."Result.txt",var_export($result,true)	);
+
+	//csv形式での出力
+	$putKakaku->filename=$EC["Name"]."Result.csv";
+	$putKakaku->array=$result;
+	$result=$putKakaku->go();
+	
 /*
 	//詳細データ取得
 	$itiran=$result;	//

@@ -25,17 +25,38 @@ class	putKakaku{
 	}
 }
 
-//resultを受け取ってdocumentExtractionクラス(抜き出し、置き換え)でできない修正をする(要は細かいつじつま合わせ)
-class	smallModification{
+//resultを受け取ってdocumentExtractionクラス(抜き出し、置き換え)でできない修正をする
+//(要は細かいつじつま合わせ)
+class	modification{
 	public	$baseUrl;	//baseUrl
+	public	$inputArray;	//documentExtraction後の結果
 	//urlの修正
-	function	baseUrlMod(){
+	function	baseUrlAdd(){
 		$baseUrl=$this->baseUrl;
-		if(	!is_array($baseUrl)	&&	!isset($baseUrl[0])	&&	!isset($baseUrl[1])	){	//配列かつ要素がじゃなかったらfalse返して終了
+		$inputArray=$this->inputArray;
+
+		//baseUfrlのチェック。配列かつ要素空がじゃなければfalse返して終了
+		if(	!is_array($baseUrl)	&&	!isset($baseUrl[0])	&&	!isset($baseUrl[1])	){
 			return	false;
 		}
-		$changeUrlNamme=$baseUrl[0];	
+
+		$changeUrlName=$baseUrl[0];	
 		$addUrl=$baseUrl[1];
+		$result=array();
+
+		foreach($inputArray	as	$kobetu){
+			if(	isset($kobetu[$changeUrlName])	){
+				$kobetu[$changeUrlName]=$addUrl.$kobetu[$changeUrlName];
+				$result[]=$kobetu;
+			}
+		}
+		print "<pre>";
+		print_r($result);
+		print "</pre>";
+
+		return $result;
+	}
+
 	
 }
 

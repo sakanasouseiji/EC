@@ -1,83 +1,95 @@
 array (
   0 => 
   array (
-    'href' => '/store/ProductDetail.aspx?pcd=0503202101037&ccd=F1000518&wkcd=F1000510',
-    'lis_nm' => 'ルイガノ ミニベロ 電動自転車 アシスト自転車 コンパクト イーゼル-E LOUIS GARNEAU 20インチ 8段変速  21 EASEL-E',
-    'price' => '217,800',
+    'href' => '/store/ProductDetail.aspx?pcd=0433190701097&ccd=F1000518&wkcd=F1000510',
+    'lis_nm' => '店頭受取限定 ベスビー ミニベロ 電動自転車 アシスト自転車 コンパクト PSA1 BESV 20インチ 10.5Ah  YTRT06-61',
+    'price' => '203,500',
   ),
   1 => 
+  array (
+    'href' => '/store/ProductDetail.aspx?pcd=0503202103048&ccd=F1000518&wkcd=F1000510',
+    'lis_nm' => 'ルイガノ Eバイク スポーツ 電動自転車 電動アシスト アビエーター E LOUIS GARNEAU 10.9Ah 8段変速 21 AVIATOR-E',
+    'price' => '217,800',
+  ),
+  2 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0427201817013&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => '店頭受取限定 セラフ e-バイク e-bike スポーツ 電動自転車 電動アシスト Seraph 10段変速 スポーツ車大特価 Seraph',
     'price' => '219,780',
   ),
-  2 => 
+  3 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0404180514010&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => '店頭受取限定 パナソニック e-バイク e-bike スポーツ 電動自転車 電動アシスト XU1 2018 Panasonic BE-EXU44',
     'price' => '247,500',
   ),
-  3 => 
+  4 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0433180701052&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => '店頭受取限定 ベスビー Eバイク スポーツ 電動自転車 電動アシスト JF1 BESV 7Ah 10段変速 JF1',
     'price' => '253,000',
   ),
-  4 => 
+  5 => 
+  array (
+    'href' => '/store/ProductDetail.aspx?pcd=0433190602011&ccd=F1000518&wkcd=F1000510',
+    'lis_nm' => 'ベスビー ミニベロ 電動自転車 アシスト自転車 コンパクト PSF1 BESV 7段変速 通勤通学におすすめ電動 PSF1',
+    'price' => '269,500',
+  ),
+  6 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0503202102010&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => 'ルイガノ ミニベロ 電動自転車 アシスト自転車 コンパクト イーゼル INTER5E Di2 LOUIS GARNEAU 20インチ 5段変速  21 EASEL INTER5E Di2',
     'price' => '272,800',
   ),
-  5 => 
+  7 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0411201915015&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => '店頭受取限定 アウトレットセール ターン ミニベロ 電動自転車 アシスト自転車 コンパクト マット ブラック 20インチ 2019 Vektron tern 通勤通学におすすめ電動 19 Vektron',
     'price' => '296,780',
   ),
-  6 => 
+  8 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0433180702059&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => '店頭受取限定 ベスビー Eバイク スポーツ 電動自転車 電動アシスト JR1 BESV 7Ah 11段変速 JR1',
     'price' => '303,600',
   ),
-  7 => 
+  9 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0442190601016&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => '店頭受取限定 ジープ e-バイク e-bike スポーツ 電動自転車 電動アシスト 27.5インチ 2019 JE-279E JEEP 11.6Ah 9段変速 19 JE-279E',
     'price' => '327,800',
   ),
-  8 => 
+  10 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0444202139012&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => 'ネスト Eバイク スポーツ 電動自転車 電動アシスト X-VALLEY E6180 NESTO 27インチ 11.6Ah 10段変速 NE-20-017',
     'price' => '328,900',
   ),
-  9 => 
+  11 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0406190904034&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => 'ミヤタサイクル Eバイク スポーツ 電動自転車 電動アシスト 2020 ロードレックス 6180 ミヤタ MIYATA 11.6Ah 10段変速 VRR61xxx',
     'price' => '328,900',
   ),
-  10 => 
+  12 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0404200902018&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => 'パナソニック Eバイク スポーツ 電動自転車 電動アシスト マットチャコールブラック XM2 Panasonic 27.5インチ 12.0Ah 外装22段 BE-EWM240',
     'price' => '426,800',
   ),
-  11 => 
+  13 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0452201901011&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => '店頭受取限定 ダボス e-バイク e-bike スポーツ 電動自転車 電動アシスト 700C DAVOS 10段変速 DAVOS E-600',
     'price' => '473,000',
   ),
-  12 => 
+  14 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0433180302013&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => '店頭受取限定 ベスビー e-バイク e-bike スポーツ 電動自転車 電動アシスト 27.5インチ TRS1 BESV 11段変速 TRS1',
     'price' => '508,200',
   ),
-  13 => 
+  15 => 
   array (
     'href' => '/store/ProductDetail.aspx?pcd=0404200712013&ccd=F1000518&wkcd=F1000510',
     'lis_nm' => 'パナソニック Eバイク スポーツ 電動自転車 電動アシスト シルバー XM-D2V Panasonic 12.0Ah BE-EWMD242',

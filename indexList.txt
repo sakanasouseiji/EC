@@ -41,4 +41,10 @@ array (
   39 => 'href',
   40 => 'lis_nm',
   41 => 'price',
+  42 => 'href',
+  43 => 'lis_nm',
+  44 => 'price',
+  45 => 'href',
+  46 => 'lis_nm',
+  47 => 'price',
 )

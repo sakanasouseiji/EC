@@ -50,6 +50,7 @@ $scraping=new scraping();
 $documentExtraction=new DocumentExtraction();
 $putKakaku=new putKakaku();
 $result=array();
+$modification=new modification();
 
 
 //サイト別
@@ -80,30 +81,15 @@ foreach($ECsiteList as $EC){
 		}
 	}while(	$subject!==false	);
 
-	foreach($result
-
-
-
-
+	//urlの補完(単純に追加しているだけ)
+	$modification->baseUrl=$EC["baseUrl"];
+	$modification->inputArray=$result;
+	$result=$modification->baseUrlAdd();
 
 	//csv形式での出力
 	$putKakaku->filename=$EC["Name"]."Result.csv";
 	$putKakaku->array=$result;
 	$result=$putKakaku->go();
 	
-/*
-	//詳細データ取得
-	$itiran=$result;	//
-	$shousai=array();	//詳細
-	$baseUrl=$EC["baseUrl"];	//$EC["baseUrl"]はここで初利用
-	foreach($itiran as $no => $kobetu){
-		if(	$EC["baseUrl"]!==false	){
-			$kobetu["href"]=$EC["baseUrl"].$kobetu["href"]
-			$scraping->url=$kobetu["basdeUrl"];
-
-
-		}
-	}
- */
 }
 ?>

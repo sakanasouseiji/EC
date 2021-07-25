@@ -30,6 +30,7 @@ class	putKakaku{
 class	modification{
 	public	$baseUrl;	//baseUrl
 	public	$inputArray;	//documentExtraction後の結果
+
 	//urlの修正
 	function	baseUrlAdd(){
 		$baseUrl=$this->baseUrl;
@@ -37,6 +38,7 @@ class	modification{
 
 		//baseUfrlのチェック。配列かつ要素空がじゃなければfalse返して終了
 		if(	!is_array($baseUrl)	&&	!isset($baseUrl[0])	&&	!isset($baseUrl[1])	){
+			print "baseUrl not found!! false!!";
 			return	false;
 		}
 
@@ -50,14 +52,28 @@ class	modification{
 				$result[]=$kobetu;
 			}
 		}
-		print "<pre>";
-		print_r($result);
-		print "</pre>";
 
 		return $result;
 	}
 
 	
+	//商品名(車名)の確定
+	function	productNameDiscrimination(){
+		$cycleNameList=$this->cycleNameList;
+		$inputArray=$this->inputArray;
+
+
+		$result=array();
+
+		foreach($inputArray	as	$kobetu){
+
+
+
+
+		}
+
+		return $result;
+	}
 }
 
 ?>

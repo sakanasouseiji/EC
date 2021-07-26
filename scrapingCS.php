@@ -14,12 +14,8 @@ require_once("./lib/function.php");
 //
 $ECsiteList=array(
 	"CycleSpot"=>array(		//サイクルスポット
-		"Name"=>"CycleSpot",	//サイト名
+		"Name"=>"cyclespot",	//サイト名,吐き出すファイル名にもなる
 		"Url"=>"https://cyclespot.jp/store/CategoryList.aspx?ccd=F1000518&wkcd=F1000510&SKEY=price&SORDER=0&page=",	//スクレイピングするurl
-		"baseUrl"=>array(
-			"href",					//変更したいurlの配列添字
-			"https://cyclespot.jp"	//ベースurl,取得したurlに足す。必要ない場合はfalseもしくはnull
-		),
 		"startPageNo"=>"0",	//最初のページナンバー
 		"FileName"=>"CycleSpot.html",	//吐き出すファイル名
 		"outlinePattern"=>"/並び順.[\s\S]*?pagination/iu",	//アウトラインパターン
@@ -35,14 +31,31 @@ $ECsiteList=array(
 			"/("."lis_nm".")(.[\s\S]*?$)/iu",
 			"/("."price".")(.[\s\S]*?$)/iu"
 		),	
-		"changeIndexName"=>"$1",
+		"changeIndexName"=>array(
+			"url",
+			"mongon",
+			"$1"
+		),
 		//トリムパターン
 		"replacePattern"=>array(
 			"/(^.[\s\S]*?href=\')(.[\s\S]*?)(\'\sonclick.[\s\S]*?$)/iu",
 			"/(lis_nm\">)(.[\s\S]*?)(<\/span>)/iu",
 			"/(^.[\s\S]*?)([0-9]{1,3},[0-9]{3})(.[\s\S]*?$)/iu"
 		),
-		"replacement"=>"$2"
+		//"replacement"=>"$2",
+		"replacement"=>array(
+			"https://cyclespot.jp"."$2",
+			"$2",
+			"$2"
+		),
+
+
+		//特殊修正
+		//一律で置き換え、トリムできないパターンはこちらで処理する。
+		"baseUrl"=>array(
+			"href",					//変更したいurlの配列添字
+			"https://cyclespot.jp"	//ベースurl,取得したurlに足す。必要ない場合はfalseもしくはnull
+		)
 	)
 );
 
@@ -82,10 +95,11 @@ foreach($ECsiteList as $EC){
 	}while(	$subject!==false	);
 
 	//urlの補完(単純に追加しているだけ)
+	/*
 	$modification->baseUrl=$EC["baseUrl"];
 	$modification->inputArray=$result;
 	$result=$modification->baseUrlAdd();
-
+	 */
 	//csv形式での出力
 	$putKakaku->filename=$EC["Name"]."Result.csv";
 	$putKakaku->array=$result;

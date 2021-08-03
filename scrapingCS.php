@@ -36,7 +36,7 @@ $ECsiteList=array(
 			"mongon",
 			"$1"
 		),
-		//トリムパターン
+		//トリミングパターン
 		"replacePattern"=>array(
 			"/(^.[\s\S]*?href=\')(.[\s\S]*?)(\'\sonclick.[\s\S]*?$)/iu",
 			"/(lis_nm\">)(.[\s\S]*?)(<\/span>)/iu",
@@ -52,9 +52,9 @@ $ECsiteList=array(
 
 		//特殊修正
 		//一律で置き換え、トリムできないパターンはこちらで処理する。
-		"baseUrl"=>array(
-			"href",					//変更したいurlの配列添字
-			"https://cyclespot.jp"	//ベースurl,取得したurlに足す。必要ない場合はfalseもしくはnull
+		//車種確定用
+		"modifi"=>array(
+			"subjectName"=>"mongon"		//車種確定時の正規表現対象index、subject名
 		)
 	)
 );
@@ -94,7 +94,7 @@ foreach($ECsiteList as $EC){
 		}
 	}while(	$subject!==false	);
 
-	//urlの補完(単純に追加しているだけ)
+	//urlの補完(単純に追加しているだけ)	車種確定部分に作り直し予定
 	/*
 	$modification->baseUrl=$EC["baseUrl"];
 	$modification->inputArray=$result;

@@ -9,7 +9,7 @@ class	putKakaku{
 		$filename=$this->filename;
 		$array=$this->array;
 		//見出し行
-		$outputData="no,href,name,price\n";
+		$outputData="no,href,mongon,price\n";
 
 		//本文
 		foreach($array	as	$no	=>	$kobetu){
@@ -27,41 +27,18 @@ class	putKakaku{
 
 //resultを受け取ってdocumentExtractionクラス(抜き出し、置き換え)でできない修正をする
 //(要は細かいつじつま合わせ)
+//車種確定もここ
 class	modification{
-	public	$baseUrl;	//baseUrl
-	public	$inputArray;	//documentExtraction後の結果
-
-	//urlの修正
-	function	baseUrlAdd(){
-		$baseUrl=$this->baseUrl;
-		$inputArray=$this->inputArray;
-
-		//baseUfrlのチェック。配列かつ要素空がじゃなければfalse返して終了
-		if(	!is_array($baseUrl)	&&	!isset($baseUrl[0])	&&	!isset($baseUrl[1])	){
-			print "baseUrl not found!! false!!";
-			return	false;
-		}
-
-		$changeUrlName=$baseUrl[0];	
-		$addUrl=$baseUrl[1];
-		$result=array();
-
-		foreach($inputArray	as	$kobetu){
-			if(	isset($kobetu[$changeUrlName])	){
-				$kobetu[$changeUrlName]=$addUrl.$kobetu[$changeUrlName];
-				$result[]=$kobetu;
-			}
-		}
-
-		return $result;
-	}
+	public	$subjectName			//subject名	
+	public	$inputArray				//入力配列
+	public	$cycleNameList			//車種名リスト
 
 	
 	//商品名(車名)の確定
 	function	productNameDiscrimination(){
 		$cycleNameList=$this->cycleNameList;
 		$inputArray=$this->inputArray;
-
+		$subject=$this->productNameSubject;
 
 		$result=array();
 

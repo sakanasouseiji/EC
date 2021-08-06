@@ -53,4 +53,54 @@ class	modification{
 	}
 }
 
+//db取扱
+class	db{
+	public	$db;
+	public	$host;
+	public	$dbName;
+	public	$dbUser;
+	public	$dbPass;
+	public	$PDO;
+
+	//dbオープン
+	function	open(){
+
+		//エラーチェック
+		if(	!isset($db)	){
+			print "empty db	false!\r\n";
+			return false;
+		}
+		if(	!isset($host)	){
+			print "empty host	false!\r\n";
+			return false;
+		}
+		if(	!isset($dbName)	){
+			print "empty dbName	false!\r\n";
+			return false;
+		}
+		if(	!isset($dbUser)	){
+			print "empty dbUser	false!\r\n";
+			return false;
+		}
+		if(	!isset($dbPass)	){
+			print "empty dbPass	false!\r\n";
+			return false;
+		}
+		try{
+			$this->PDO=new PDO($db.":host=".$host.";dbname=".$dbName,$dbUser,$dbPass);
+		}catch(PDOException $error){
+			print "connect false!\r\n";
+			print $error->getMessage();
+			return false;
+		}
+		print "connect complete\r\n";
+		return true;
+	}
+	//dbクローズ
+	function	close(){
+		print "db close\r\n";
+		$this->PDO=null;
+	}
+
+
 ?>

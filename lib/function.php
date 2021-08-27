@@ -29,9 +29,9 @@ class	putKakaku{
 //(要は細かいつじつま合わせ)
 //車種確定もここ
 class	modification{
-	public	$subjectName			//subject名	
-	public	$inputArray				//入力配列
-	public	$cycleNameList			//車種名リスト
+	public	$subjectName;			//subject名	
+	public	$inputArray;			//入力配列
+	public	$cycleNameList;			//車種名リスト
 
 	
 	//商品名(車名)の確定
@@ -101,6 +101,6 @@ class	db{
 		print "db close\r\n";
 		$this->PDO=null;
 	}
-
+}
 
 ?>

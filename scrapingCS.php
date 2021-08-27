@@ -15,7 +15,8 @@ require_once("./lib/function.php");
 $ECsiteList=array(
 	"CycleSpot"=>array(		//サイクルスポット
 		"Name"=>"cyclespot",	//サイト名,吐き出すファイル名にもなる
-		"Url"=>"https://cyclespot.jp/store/CategoryList.aspx?ccd=F1000518&wkcd=F1000510&SKEY=price&SORDER=0&page=",	//スクレイピングするurl
+		//"Url"=>"https://cyclespot.jp/store/CategoryList.aspx?ccd=F1000518&wkcd=F1000510&SKEY=price&SORDER=0&page=",	//スクレイピングするurl(電動自転車全体)
+		"Url"=>"https://cyclespot.jp/store/CategoryList.aspx?ccd=F1000544&wkcd=F1000510-F1000518&SKEY=price&SORDER=0&page=",	//スクレイピングするurl(子乗せ電動自転車)
 		"startPageNo"=>"0",	//最初のページナンバー
 		"FileName"=>"CycleSpot.html",	//吐き出すファイル名
 		"outlinePattern"=>"/並び順.[\s\S]*?pagination/iu",	//アウトラインパターン
@@ -40,13 +41,13 @@ $ECsiteList=array(
 		"replacePattern"=>array(
 			"/(^.[\s\S]*?href=\')(.[\s\S]*?)(\'\sonclick.[\s\S]*?$)/iu",
 			"/(lis_nm\">)(.[\s\S]*?)(<\/span>)/iu",
-			"/(^.[\s\S]*?)([0-9]{1,3},[0-9]{3})(.[\s\S]*?$)/iu"
+			"/(^.[\s\S]*?)([0-9]{1,4})\,([0-9]{3})(.[\s\S]*?$)/iu"
 		),
 		//"replacement"=>"$2",
 		"replacement"=>array(
 			"https://cyclespot.jp"."$2",
 			"$2",
-			"$2"
+			"$2$3"
 		),
 
 

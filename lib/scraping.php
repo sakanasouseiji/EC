@@ -2,6 +2,48 @@
 //スクレイピングクラスと正規表現による抜き出し、置き換えクラスのセット
 //
 
+//全体取得
+class siteGet{
+	public	$EC;
+	function	go(){
+		$EC=$this->EC;
+		$scraping=new scraping();
+		$documentExtraction=new DocumentExtraction();
+		$result=array();
+		$modification=new modification();
+
+
+
+		//一覧ページ(アウトラインもしくはディティールでfalseが出たらページ終了と判断して終わり)
+		do{
+			print $EC["Url"].$EC["startPageNo"]."\n";
+			$scraping->url=$EC["Url"].$EC["startPageNo"];
+			$documentExtraction->subject=$scraping->go();
+			$documentExtraction->outlinePattern=$EC["outlinePattern"];
+			$documentExtraction->detailsPattern=$EC["detailsPattern"];
+			$documentExtraction->changeIndexSarch=$EC["changeIndexSarch"];
+			$documentExtraction->changeIndexName=$EC["changeIndexName"];
+			$documentExtraction->replacePattern=$EC["replacePattern"];
+			$documentExtraction->replacement=$EC["replacement"];
+			$subject=$documentExtraction->pageGet();
+			$pageResult=$subject;
+
+			++$EC["startPageNo"];
+			if(	$pageResult!==false	){
+				$result=array_merge($result,$pageResult);
+			}
+		}while(	$subject!==false	);
+
+		return	$result;
+	}
+}
+
+
+
+
+
+
+
 //スクレイピングクラス
 class scraping{
 
@@ -86,7 +128,7 @@ class	DocumentExtraction{
 	private	$detailsResult;
 	private	$outlineResult;
 	private	$replaceResult;
-	function	get(){
+	function	pageGet(){
 		if($this->outlinePattern==null){
 			print "no outlinePattern!\r\n";
 			return false;
@@ -216,8 +258,13 @@ class	DocumentExtraction{
 	private	function	match(){
 		$subject=$this->subject;
 		$pattern=$this->pattern;
-
+ 
 		preg_match($pattern,$subject,$result);
+
+		if(	!isset(	$result[0]	)	){
+			print "error!!! not result[0]!!";
+			print_r($result);
+		}
 
 		return $result[0];
 

@@ -37,15 +37,15 @@ array (
   26 => 'priceB2\'><span class="priceNumeric">138,600</span>',
   27 => 'lis_mk">ブリヂストンサイクル</span>
                 <a href=\'/store/ProductDetail.aspx?pcd=0443191012030&ccd=F1000544&wkcd=F1000510-F1000518\' onclick=\'\' class="sclistanc',
-  28 => 'lis_nm">ブリヂストン 電動自転車 子供乗せ 2020 ビッケグリ bikke GRI ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BG0B40</span>',
+  28 => 'lis_nm">ブリヂストン 電動自転車 子供乗せ ビッケグリ bikke GRI ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BG0B40</span>',
   29 => 'priceB2\'><span class="priceNumeric">138,699</span>',
   30 => 'lis_mk">ブリヂストンサイクル</span>
                 <a href=\'/store/ProductDetail.aspx?pcd=0443191013068&ccd=F1000544&wkcd=F1000510-F1000518\' onclick=\'\' class="sclistanc',
-  31 => 'lis_nm">ブリヂストン 電動自転車 子供乗せ 2020 ビッケポーラー bikke POLARR e ブリジストン BRIDGESTONE 15.4Ah 3段変速 BP0C40</span>',
+  31 => 'lis_nm">ブリヂストン 電動自転車 子供乗せ ビッケポーラー bikke POLARR e ブリジストン BRIDGESTONE 15.4Ah 3段変速 BP0C40</span>',
   32 => 'priceB2\'><span class="priceNumeric">139,700</span>',
   33 => 'lis_mk">ブリヂストンサイクル</span>
                 <a href=\'/store/ProductDetail.aspx?pcd=0443191011026&ccd=F1000544&wkcd=F1000510-F1000518\' onclick=\'\' class="sclistanc',
-  34 => 'lis_nm">ブリヂストン 電動自転車 子供乗せ 2020 ビッケモブ bikke MOB ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BM0B40</span>',
+  34 => 'lis_nm">ブリヂストン 電動自転車 子供乗せ ビッケモブ bikke MOB ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BM0B40</span>',
   35 => 'priceB2\'><span class="priceNumeric">140,800</span>',
   36 => 'lis_mk">LOUIS GARNEAU</span>
                 <a href=\'/store/ProductDetail.aspx?pcd=0503202003034&ccd=F1000544&wkcd=F1000510-F1000518\' onclick=\'\' class="sclistanc',
@@ -61,7 +61,7 @@ array (
   44 => 'priceB2\'><span class="priceNumeric">153,780</span>',
   45 => 'lis_mk">ブリヂストンサイクル</span>
                 <a href=\'/store/ProductDetail.aspx?pcd=0443200108013&ccd=F1000544&wkcd=F1000510-F1000518\' onclick=\'\' class="sclistanc',
-  46 => 'lis_nm">ブリヂストン 電動自転車 子供乗せ 2020 ハイディー2 ブリジストン BRIDGESTONE 9.9Ah 3段変速 オートライト HY6B40</span>',
+  46 => 'lis_nm">ブリヂストン 電動自転車 子供乗せ ハイディー2 ブリジストン BRIDGESTONE 9.9Ah 3段変速 オートライト HY6B40</span>',
   47 => 'priceB2\'><span class="priceNumeric">156,200</span>',
   48 => 'lis_mk">パナソニック</span>
                 <a href=\'/store/ProductDetail.aspx?pcd=0404191103036&ccd=F1000544&wkcd=F1000510-F1000518\' onclick=\'\' class="sclistanc',

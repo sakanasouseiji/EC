@@ -56,19 +56,19 @@ array (
   9 => 
   array (
     'url' => 'https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443191012030&ccd=F1000544&wkcd=F1000510-F1000518',
-    'mongon' => 'ブリヂストン 電動自転車 子供乗せ 2020 ビッケグリ bikke GRI ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BG0B40',
+    'mongon' => 'ブリヂストン 電動自転車 子供乗せ ビッケグリ bikke GRI ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BG0B40',
     'price' => '138699',
   ),
   10 => 
   array (
     'url' => 'https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443191013068&ccd=F1000544&wkcd=F1000510-F1000518',
-    'mongon' => 'ブリヂストン 電動自転車 子供乗せ 2020 ビッケポーラー bikke POLARR e ブリジストン BRIDGESTONE 15.4Ah 3段変速 BP0C40',
+    'mongon' => 'ブリヂストン 電動自転車 子供乗せ ビッケポーラー bikke POLARR e ブリジストン BRIDGESTONE 15.4Ah 3段変速 BP0C40',
     'price' => '139700',
   ),
   11 => 
   array (
     'url' => 'https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443191011026&ccd=F1000544&wkcd=F1000510-F1000518',
-    'mongon' => 'ブリヂストン 電動自転車 子供乗せ 2020 ビッケモブ bikke MOB ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BM0B40',
+    'mongon' => 'ブリヂストン 電動自転車 子供乗せ ビッケモブ bikke MOB ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BM0B40',
     'price' => '140800',
   ),
   12 => 
@@ -92,7 +92,7 @@ array (
   15 => 
   array (
     'url' => 'https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443200108013&ccd=F1000544&wkcd=F1000510-F1000518',
-    'mongon' => 'ブリヂストン 電動自転車 子供乗せ 2020 ハイディー2 ブリジストン BRIDGESTONE 9.9Ah 3段変速 オートライト HY6B40',
+    'mongon' => 'ブリヂストン 電動自転車 子供乗せ ハイディー2 ブリジストン BRIDGESTONE 9.9Ah 3段変速 オートライト HY6B40',
     'price' => '156200',
   ),
   16 => 

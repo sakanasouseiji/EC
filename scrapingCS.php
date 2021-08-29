@@ -60,6 +60,7 @@ $ECsiteList=array(
 	)
 );
 
+/*
 $scraping=new scraping();
 $documentExtraction=new DocumentExtraction();
 $putKakaku=new putKakaku();
@@ -81,30 +82,35 @@ foreach($ECsiteList as $EC){
 		$documentExtraction->changeIndexName=$EC["changeIndexName"];
 		$documentExtraction->replacePattern=$EC["replacePattern"];
 		$documentExtraction->replacement=$EC["replacement"];
-		$subject=$documentExtraction->get();
+		$subject=$documentExtraction->pageGet();
 		$pageResult=$subject;
-		/*
-		print "<pre>";
-		//print_r($pageResult);
-
-		print "</pre>";
-		 */
 		++$EC["startPageNo"];
 		if(	$pageResult!==false	){
 			$result=array_merge($result,$pageResult);
 		}
 	}while(	$subject!==false	);
 
-	//urlの補完(単純に追加しているだけ)	車種確定部分に作り直し予定
-	/*
-	$modification->baseUrl=$EC["baseUrl"];
-	$modification->inputArray=$result;
-	$result=$modification->baseUrlAdd();
-	 */
 	//csv形式での出力
 	$putKakaku->filename=$EC["Name"]."Result.csv";
 	$putKakaku->array=$result;
 	$result=$putKakaku->go();
+
 	
+
+
+}
+ */
+
+$siteGet=new siteGet();
+$putKakaku=new putKakaku();
+
+foreach($ECsiteList as $EC){
+	$siteGet->EC=$EC;
+	$result=$siteGet->go();
+
+	//csv形式での出力
+	$putKakaku->filename=$EC["Name"]."Result.csv";
+	$putKakaku->array=$result;
+	$result=$putKakaku->go();
 }
 ?>

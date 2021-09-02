@@ -38,7 +38,14 @@ class siteGet{
 	}
 }
 
-
+//車種確定()
+class	shashuKakutei{
+	public	$inputArray;
+	public	$indexArrayName;
+	public	$result;
+	function	go(){
+	}
+}
 
 
 

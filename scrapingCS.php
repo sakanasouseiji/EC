@@ -60,53 +60,22 @@ $ECsiteList=array(
 	)
 );
 
-/*
-$scraping=new scraping();
-$documentExtraction=new DocumentExtraction();
-$putKakaku=new putKakaku();
-$result=array();
-$modification=new modification();
-
-
-//サイト別
-foreach($ECsiteList as $EC){
-
-	//一覧ページ(アウトラインもしくはディティールでfalseが出たらページ終了と判断して終わり)
-	do{
-		print $EC["Url"].$EC["startPageNo"]."\n";
-		$scraping->url=$EC["Url"].$EC["startPageNo"];
-		$documentExtraction->subject=$scraping->go();
-		$documentExtraction->outlinePattern=$EC["outlinePattern"];
-		$documentExtraction->detailsPattern=$EC["detailsPattern"];
-		$documentExtraction->changeIndexSarch=$EC["changeIndexSarch"];
-		$documentExtraction->changeIndexName=$EC["changeIndexName"];
-		$documentExtraction->replacePattern=$EC["replacePattern"];
-		$documentExtraction->replacement=$EC["replacement"];
-		$subject=$documentExtraction->pageGet();
-		$pageResult=$subject;
-		++$EC["startPageNo"];
-		if(	$pageResult!==false	){
-			$result=array_merge($result,$pageResult);
-		}
-	}while(	$subject!==false	);
-
-	//csv形式での出力
-	$putKakaku->filename=$EC["Name"]."Result.csv";
-	$putKakaku->array=$result;
-	$result=$putKakaku->go();
-
-	
-
-
-}
- */
 
 $siteGet=new siteGet();
 $putKakaku=new putKakaku();
+$shashuKakutei=new shashuKakutei();	//センス無いネーミング
 
+//サイトごとに取得、出力
 foreach($ECsiteList as $EC){
 	$siteGet->EC=$EC;
 	$result=$siteGet->go();
+
+	//車種確定(入力配列に)
+	$shashuKakutei->inputArray=$result;
+	$shashuKakutei->indexArrayName=$result;
+	$result=$shashukakutei->go();
+
+
 
 	//csv形式での出力
 	$putKakaku->filename=$EC["Name"]."Result.csv";

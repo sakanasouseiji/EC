@@ -43,6 +43,17 @@ class	shashuKakutei{
 	public	$inputArray;
 	public	$indexArrayName;
 	public	$result;
+	private	$shashuIndex;
+	private	$shashuIndexColum;
+	private	$db;
+
+	//事前準備、車種確定インデックスの読み込み
+	function	__construct(){
+		$db=new	db();
+
+		
+
+	}
 	function	go(){
 	}
 }

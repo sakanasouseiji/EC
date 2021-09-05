@@ -53,11 +53,6 @@ class	modification{
 	}
 }
 
-//車種インデックス読み込み
-//
-class	shashuIndexRead{
-
-}
 
 //db取扱
 class	db{
@@ -71,6 +66,11 @@ class	db{
 	//dbオープン
 	function	open(){
 
+		$db=$this->db;
+		$host=$this->host;
+		$dbName=$this->dbName;
+		$dbUser=$this->dbUser;
+		$dbPass=$this->dbPass;
 		//エラーチェック
 		if(	!isset($db)	){
 			print "empty db	false!\r\n";

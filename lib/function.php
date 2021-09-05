@@ -53,6 +53,12 @@ class	modification{
 	}
 }
 
+//車種インデックス読み込み
+//
+class	shashuIndexRead{
+
+}
+
 //db取扱
 class	db{
 	public	$db;

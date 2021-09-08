@@ -2,6 +2,9 @@
 
 require_once("./lib/scraping.php");
 require_once("./lib/function.php");
+
+//dbパラメーター
+require_once($_SERVER["DOCUMENT_ROOT"]."dbPath/dbParameter.php");
 //スクレイピングの実行サンプル。例としてサイクルスポットを使う
 //備忘録
 //サイトurlを指定してスクレイピング
@@ -10,8 +13,9 @@ require_once("./lib/function.php");
 //
 
 
+
+
 //サンプル、サイクルスポット電動自転車安いもの順
-//
 $ECsiteList=array(
 	"CycleSpot"=>array(		//サイクルスポット
 		"Name"=>"cyclespot",	//サイト名,吐き出すファイル名にもなる

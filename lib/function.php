@@ -25,6 +25,27 @@ class	putKakaku{
 	}
 }
 
+
+//車種確定()
+class	shashuKakutei{
+	public	$inputArray;
+	public	$indexArrayName;
+	public	$result;
+	private	$shashuIndex;
+	private	$shashuIndexColum;
+	private	$db;
+
+	//事前準備、車種確定インデックスの読み込み
+	function	__construct(){
+		$db=new	db();
+
+		
+
+	}
+	function	go(){
+	}
+}
+
 //resultを受け取ってdocumentExtractionクラス(抜き出し、置き換え)でできない修正をする
 //(要は細かいつじつま合わせ)
 //車種確定もここ
@@ -62,7 +83,17 @@ class	db{
 	public	$dbUser;
 	public	$dbPass;
 	public	$PDO;
+	public	$dbParameter;
 
+	function	__construct(){
+		$this->dbParameter=new dbParameter();
+		$this->db=$this->dbParameter->db;
+		$this->host=$this->dbParameter->host;
+		$this->dbName=$this->dbParameter->dbName;
+		$this->dbUser=$this->dbParameter->dbUser;
+		$this->dbPass=$this->dbParameter->dbPass;
+	}
+	
 	//dbオープン
 	function	open(){
 

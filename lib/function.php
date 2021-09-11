@@ -33,15 +33,17 @@ class	shashuKakutei{
 	public	$result;
 	private	$shashuIndex;
 	private	$shashuIndexColum;
-	private	$db;
+	public	$db;
 
 	//事前準備、車種確定インデックスの読み込み
 	function	__construct(){
-		$db=new	db();
-
-		
-
+		if(	!isset($this->db->open())	){
+			print "車種別インデックス読み込みdbオープン失敗、終了します。\r\n";
+			exit();
+		}
 	}
+
+
 	function	go(){
 	}
 }
@@ -85,6 +87,7 @@ class	db{
 	public	$PDO;
 	public	$dbParameter;
 
+	//db基本情報読み込み
 	function	__construct(){
 		$this->dbParameter=new dbParameter();
 		$this->db=$this->dbParameter->db;

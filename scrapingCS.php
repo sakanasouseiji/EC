@@ -4,7 +4,7 @@ require_once("./lib/scraping.php");
 require_once("./lib/function.php");
 
 //dbパラメーター
-require_once($_SERVER["DOCUMENT_ROOT"]."dbPath/dbParameter.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."dbPath/scrapingDBParameter.php");
 //スクレイピングの実行サンプル。例としてサイクルスポットを使う
 //備忘録
 //サイトurlを指定してスクレイピング
@@ -68,6 +68,8 @@ $ECsiteList=array(
 $siteGet=new siteGet();
 $putKakaku=new putKakaku();
 $shashuKakutei=new shashuKakutei();	//センス無いネーミング
+$db=new db();
+
 
 //サイトごとに取得、出力
 foreach($ECsiteList as $EC){
@@ -77,6 +79,7 @@ foreach($ECsiteList as $EC){
 	//車種確定(入力配列に)
 	$shashuKakutei->inputArray=$result;
 	$shashuKakutei->indexArrayName=$result;
+	$shashuKakutei->db=$db;
 	$result=$shashukakutei->go();
 
 

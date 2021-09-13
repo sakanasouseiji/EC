@@ -144,10 +144,12 @@ class	db{
 	//読込、指定テーブル名のfetchAllを結果として吐き出す。
 	//そもそもfetchAllを大分忘れているのでおためし用
 	function	readAll($tableName){
-		$stmt=$this->PDO->prepare("select * ftom :tableName");
-		$stmt->bindvalue(":tableName",$tableName);
-		$stmt->execute();
-		$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+		//$stmt=$this->PDO->prepare("select * ftom :tableName");
+		//$stmt->bindvalue(":tableName",$tableName);
+		//$stmt->execute();
+		$stmt=$this->PDO->query('SELECT * FROM shashuIndex');
+		$result=$stmt->fetchAll();
+		//$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
 		return $result;
 	}
 

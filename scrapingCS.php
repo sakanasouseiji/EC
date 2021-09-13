@@ -88,7 +88,7 @@ foreach($ECsiteList as $EC){
 
 
 	//test
-	$putKakaku->filename="ShashuIndex.csv";
+	$putKakaku->filename="shashuIndex.csv";
 	$putKakaku->array=$index;
 	$putKakaku->go($outputData);
 	//testここまで

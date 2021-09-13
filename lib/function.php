@@ -5,11 +5,11 @@
 class	putKakaku{
 	public	$filename;
 	public	$array;
-	function go(){
+	function go($outputData=""){
 		$filename=$this->filename;
 		$array=$this->array;
 		//見出し行
-		$outputData="no,href,mongon,price\n";
+		//$outputData="no,href,mongon,price\n";
 
 		//本文
 		foreach($array	as	$no	=>	$kobetu){
@@ -31,26 +31,31 @@ class	shashuKakutei{
 	public	$inputArray;
 	public	$indexArrayName;
 	public	$result;
-	private	$shashuIndex;
-	private	$shashuIndexColum;
+	public	$shashuIndex;
+	public	$shashuIndexColum;
 	public	$db;
 
-	//事前準備、車種確定インデックスの読み込み
-	function	__construct(){
-		if(	!isset($this->db->open())	){
-			print "車種別インデックス読み込みdbオープン失敗、終了します。\r\n";
+	//事前準備
+	function	__construct($db){
+		$this->db=$db;
+		$openFlag=$this->db->open();
+		if(	!isset($openFlag)	){
+			print "dbオープン失敗、終了します。\r\n";
 			exit();
 		}
 	}
 
 
 	function	go(){
+		$tableName=$this->shashuIndex;
+		//車種インデックス読み込み
+		$result=$this->db->readAll($tableName);
+		return $result;
 	}
 }
 
 //resultを受け取ってdocumentExtractionクラス(抜き出し、置き換え)でできない修正をする
 //(要は細かいつじつま合わせ)
-//車種確定もここ
 class	modification{
 	public	$subjectName;			//subject名	
 	public	$inputArray;			//入力配列
@@ -136,6 +141,18 @@ class	db{
 		print "connect complete\r\n";
 		return true;
 	}
+	//読込、指定テーブル名のfetchAllを結果として吐き出す。
+	//そもそもfetchAllを大分忘れているのでおためし用
+	function	readAll($tableName){
+		$stmt=$this->PDO->prepare("select * ftom :tableName");
+		$stmt->bindvalue(":tableName",$tableName);
+		$stmt->execute();
+		$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+
+
+
 	//dbクローズ
 	function	close(){
 		print "db close\r\n";

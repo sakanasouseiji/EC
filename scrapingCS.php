@@ -63,12 +63,13 @@ $ECsiteList=array(
 		)
 	)
 );
-
+$outputData="no,href,mongon,price\n";
+$shashuIndex="shashuIndex";
 
 $siteGet=new siteGet();
 $putKakaku=new putKakaku();
-$shashuKakutei=new shashuKakutei();	//センス無いネーミング
 $db=new db();
+$shashuKakutei=new shashuKakutei($db);	//センス無いネーミング
 
 
 //サイトごとに取得、出力
@@ -80,13 +81,21 @@ foreach($ECsiteList as $EC){
 	$shashuKakutei->inputArray=$result;
 	$shashuKakutei->indexArrayName=$result;
 	$shashuKakutei->db=$db;
-	$result=$shashukakutei->go();
+	
+
+	$shashuKakutei->shashuIndex=$shashuIndex;
+	$index=$shashuKakutei->go();
 
 
+	//test
+	$putKakaku->filename="ShashuIndex.csv";
+	$putKakaku->array=$index;
+	$putKakaku->go($outputData);
+	//testここまで
 
 	//csv形式での出力
 	$putKakaku->filename=$EC["Name"]."Result.csv";
 	$putKakaku->array=$result;
-	$result=$putKakaku->go();
+	$result=$putKakaku->go($outputData);
 }
 ?>

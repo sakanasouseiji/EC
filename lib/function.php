@@ -1,8 +1,8 @@
 <?php
 
-//スクレイピング価格データをcsv形式で吐き出す
+//データをcsv形式で吐き出す。デバグ用のクラス
 //classにしているのはrequire_onceで先頭に並べたいだけ
-class	putKakaku{
+class	putCsv{
 	public	$filename;
 	public	$array;
 	function go($outputData=""){
@@ -24,6 +24,23 @@ class	putKakaku{
 	return $result;
 	}
 }
+//データをprint_rでtxt形式で吐き出す。上に同じデバグ用のクラス。
+class	putPrintR{
+	public	$filename;
+	public	$array;
+	function	go(){
+		$array=$this->array;
+		$filename=$this->filename;
+
+		//本体ここから
+		$txt=print_r($array,true);
+		file_put_contents($filename,$txt);
+		//ここまで
+
+		return;
+	}
+}
+
 
 
 //車種確定()
@@ -31,7 +48,7 @@ class	shashuKakutei{
 	public	$inputArray;
 	public	$indexArrayName;
 	public	$result;
-	public	$shashuIndex;
+	public	$shashuIndexTableName;
 	public	$shashuIndexColum;
 	public	$db;
 
@@ -47,13 +64,15 @@ class	shashuKakutei{
 
 
 	function	go(){
-		$tableName=$this->shashuIndex;
+		$tableName=$this->shashuIndexTableName;
 		//車種インデックス読み込み
-		$result=$this->db->readAll($tableName);
-		return $result;
+		$this->shashuIndex=$this->db->readAll($tableName);
+
+
+		//
 	}
 }
-
+/*
 //resultを受け取ってdocumentExtractionクラス(抜き出し、置き換え)でできない修正をする
 //(要は細かいつじつま合わせ)
 class	modification{
@@ -61,7 +80,6 @@ class	modification{
 	public	$inputArray;			//入力配列
 	public	$cycleNameList;			//車種名リスト
 
-	
 	//商品名(車名)の確定
 	function	productNameDiscrimination(){
 		$cycleNameList=$this->cycleNameList;
@@ -80,7 +98,7 @@ class	modification{
 		return $result;
 	}
 }
-
+ */
 
 //db取扱
 class	db{
@@ -144,12 +162,9 @@ class	db{
 	//読込、指定テーブル名のfetchAllを結果として吐き出す。
 	//そもそもfetchAllを大分忘れているのでおためし用
 	function	readAll($tableName){
-		//$stmt=$this->PDO->prepare("select * ftom :tableName");
-		//$stmt->bindvalue(":tableName",$tableName);
-		//$stmt->execute();
-		$stmt=$this->PDO->query('SELECT * FROM shashuIndex');
-		$result=$stmt->fetchAll();
-		//$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
+		$query='SELECT * FROM '.$tableName;
+		$stmt=$this->PDO->query($query);
+		$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
 		return $result;
 	}
 

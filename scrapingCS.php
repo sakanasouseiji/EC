@@ -64,10 +64,11 @@ $ECsiteList=array(
 	)
 );
 $outputData="no,href,mongon,price\n";
-$shashuIndex="shashuIndex";
+$shashuIndexTableName="shashuIndex";
 
 $siteGet=new siteGet();
-$putKakaku=new putKakaku();
+$putCsv=new putCsv();
+$putPrintR=new putPrintR();
 $db=new db();
 $shashuKakutei=new shashuKakutei($db);	//センス無いネーミング
 
@@ -79,23 +80,28 @@ foreach($ECsiteList as $EC){
 
 	//車種確定(入力配列に)
 	$shashuKakutei->inputArray=$result;
-	$shashuKakutei->indexArrayName=$result;
 	$shashuKakutei->db=$db;
 	
 
-	$shashuKakutei->shashuIndex=$shashuIndex;
-	$index=$shashuKakutei->go();
+	$shashuKakutei->shashuIndexTableName=$shashuIndexTableName;
+	$shashuKakutei->go();
+	$index=$shashuKakutei->shashuIndex;
 
 
 	//test
-	$putKakaku->filename="shashuIndex.csv";
-	$putKakaku->array=$index;
-	$putKakaku->go($outputData);
+	//$putCsv->filename="shashuIndex.csv";
+	//$putCsv->array=$index;
+	//$putCsv->go($outputData);
 	//testここまで
 
+	//test2
+	$putPrintR->array=$index;
+	$putPrintR->filename="shashuIndex.txt";
+	$putPrintR->go();
+
 	//csv形式での出力
-	$putKakaku->filename=$EC["Name"]."Result.csv";
-	$putKakaku->array=$result;
-	$result=$putKakaku->go($outputData);
+	$putCsv->filename=$EC["Name"]."Result.csv";
+	$putCsv->array=$result;
+	$result=$putCsv->go($outputData);
 }
 ?>

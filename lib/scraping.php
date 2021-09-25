@@ -10,7 +10,7 @@ class siteGet{
 		$scraping=new scraping();
 		$documentExtraction=new DocumentExtraction();
 		$result=array();
-		$modification=new modification();
+		//$modification=new modification();	//今の所意味なし
 
 
 

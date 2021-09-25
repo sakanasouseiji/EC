@@ -65,13 +65,14 @@ $ECsiteList=array(
 );
 $outputData="no,href,mongon,price\n";
 $shashuIndexTableName="shashuIndex";
+$indexArrayKeyColum="mongon";
 
 $siteGet=new siteGet();
 $putCsv=new putCsv();
 $putPrintR=new putPrintR();
 $db=new db();
 $shashuKakutei=new shashuKakutei($db);	//センス無いネーミング
-
+$modificationPatternKey=array("seikihyougen_name","seikihyougen_year");
 
 //サイトごとに取得、出力
 foreach($ECsiteList as $EC){
@@ -79,27 +80,26 @@ foreach($ECsiteList as $EC){
 	$result=$siteGet->go();
 
 	//車種確定(入力配列に)
-	$shashuKakutei->inputArray=$result;
-	$shashuKakutei->db=$db;
-	
-
-	$shashuKakutei->shashuIndexTableName=$shashuIndexTableName;
+	$shashuKakutei->inputArray=$result;		//スクレイピング配列
+	$shashuKakutei->inputArrayKeyColum=$indexArrayKeyColum;	//正規表現対象カラム名(mongon)
+	$shashuKakutei->db=$db;		//db
+	$shashuKakutei->shashuIndexTableName=$shashuIndexTableName;	//車種インデックステーブル名
+	$shashuKakutei->modificationPatternKey=$modificationPatternKey;	//車種インデックスで利用するキー
 	$shashuKakutei->go();
-	$index=$shashuKakutei->shashuIndex;
+	$index=$shashuKakutei->shashuIndex;	//車種インデックス出力(デバグ用)
+
 
 
 	//test
-	//$putCsv->filename="shashuIndex.csv";
-	//$putCsv->array=$index;
-	//$putCsv->go($outputData);
-	//testここまで
-
-	//test2
 	$putPrintR->array=$index;
 	$putPrintR->filename="shashuIndex.txt";
 	$putPrintR->go();
 
-	//csv形式での出力
+	$putPrintR->array=$result;
+	$putPrintR->filename=$EC["Name"]."Result.txt";
+	$putPrintR->go();
+
+//csv形式での出力
 	$putCsv->filename=$EC["Name"]."Result.csv";
 	$putCsv->array=$result;
 	$result=$putCsv->go($outputData);

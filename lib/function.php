@@ -46,10 +46,11 @@ class	putPrintR{
 //車種確定()
 class	shashuKakutei{
 	public	$inputArray;
-	public	$indexArrayName;
+	public	$indexArrayKeyColum;
 	public	$result;
 	public	$shashuIndexTableName;
-	public	$shashuIndexColum;
+	public	$shashuIndex;
+	public	$modificationPatternKey;
 	public	$db;
 
 	//事前準備
@@ -67,9 +68,38 @@ class	shashuKakutei{
 		$tableName=$this->shashuIndexTableName;
 		//車種インデックス読み込み
 		$this->shashuIndex=$this->db->readAll($tableName);
+		$shashuIndex=$this->shashuIndex;
+
+		//スクレイピング結果と車種インデックスの連携その1(テスト)php上で変数で行なう
+
+		
+		$inputArray=$this->inputArray;
+		$indexArrayKeyColum=$this->indexArrayKeyColum;
+
+		$modificationPatternKey=$ithis->modificationPatternKey;
+
+		//preg_match用パターン作成
+		$pattern="/";
+		foreach(	$modificationPatternKey	as	$keyBit	){
+			$pattern=$pattern."(".$keyBit;
+
+		}
 
 
-		//
+
+		foreach(	$inputArray	as	$ob	){
+			foreach(	$shashuIndex	as	$pa	){
+				$subject=$ob[$indexArrayKeyColum];
+				$pattern=
+
+
+
+
+
+		
+			//スクレイピング結果と車種インデックスの連携その2(テスト)mysql上で行なう
+
+		}
 	}
 }
 /*

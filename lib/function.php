@@ -51,6 +51,7 @@ class	shashuKakutei{
 	public	$shashuIndexTableName;
 	public	$shashuIndex;
 	public	$modificationPatternKey;
+	public	$addColum;
 	public	$db;
 
 	//事前準備
@@ -74,34 +75,41 @@ class	shashuKakutei{
 
 		
 		$inputArray=$this->inputArray;
-		$indexArrayKeyColum=$this->indexArrayKeyColum;
+		$addColum=$this->addColum;
+		$inputArrayKeyColum=$this->inputArrayKeyColum;
+		$modificationPatternKey=$this->modificationPatternKey;
+		$modifiLog="";
 
-		$modificationPatternKey=$ithis->modificationPatternKey;
+		foreach(	$inputArray	as	$i	=>	$ob	){
+			$subject=$ob[$inputArrayKeyColum];
 
-		//preg_match用パターン作成
-		$pattern="/";
-		foreach(	$modificationPatternKey	as	$keyBit	){
-			$pattern=$pattern."(".$keyBit;
+			foreach(	$shashuIndex	as	$jitensha	){	
+				
+				//preg_match用パターン作成
+				$pattern="/";
+				foreach(	$modificationPatternKey	as	$j	){
+					$keyBit=$jitensha[$j];
+					$pattern=$pattern."(?=.*".$keyBit.")";
 
+				};
+				$pattern=$pattern."/ius";
+
+
+				if(	preg_match($pattern,$subject,$match)	){
+					print $key."\r\n";	
+					print_r($inputArray[$i]);
+					print_r(	array($addColum=>$jitensha[$addColum])	);
+					$inputArray[$i]+=array(	$addColum=>$jitensha[$addColum]	);
+					break;
+				}
+			}
+			
 		}
-
-
-
-		foreach(	$inputArray	as	$ob	){
-			foreach(	$shashuIndex	as	$pa	){
-				$subject=$ob[$indexArrayKeyColum];
-				$pattern=
-
-
-
-
-
-		
+		return $inputArray;
+	}
+}		
 			//スクレイピング結果と車種インデックスの連携その2(テスト)mysql上で行なう
 
-		}
-	}
-}
 /*
 //resultを受け取ってdocumentExtractionクラス(抜き出し、置き換え)でできない修正をする
 //(要は細かいつじつま合わせ)

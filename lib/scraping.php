@@ -90,7 +90,7 @@ class scraping{
 		$html=mb_convert_encoding($html,'utf8','auto');//UTF-8に変換
 
 		$html=file_get_contents($url);
-		file_put_contents("all.html",var_export($html,true)	);
+		//file_put_contents("all.html",var_export($html,true)	);
 
 		return $html;
 		
@@ -193,7 +193,7 @@ class	DocumentExtraction{
 		$this->pattern=$this->outlinePattern;
 		$result=$this->match();
 
-		file_put_contents("outLine.txt",var_export($result,true)	);
+		//file_put_contents("outLine.txt",var_export($result,true)	);
 		return $result;
 		
 	}
@@ -203,7 +203,7 @@ class	DocumentExtraction{
 
 		$result=$this->matchAll();
 
-		file_put_contents("details.txt",var_export($result,true)	);
+		//file_put_contents("details.txt",var_export($result,true)	);
 		return $result;
 	}
 	private	function	changeIndex(){
@@ -212,7 +212,7 @@ class	DocumentExtraction{
 		$subject=$this->detailsResult;
 		$result=preg_replace($pattern,$replacement,$subject);
 
-		file_put_contents("indexList.txt",var_export($result,true)	);
+		//file_put_contents("indexList.txt",var_export($result,true)	);
 
 		return $result;
 	}
@@ -221,7 +221,7 @@ class	DocumentExtraction{
 		$replacement=$this->replacement;
 		$subject=$this->detailsResult;
 		$result=preg_replace($pattern,$replacement,$subject);
-		file_put_contents("replace.txt",var_export($result,true)	);
+		//file_put_contents("replace.txt",var_export($result,true)	);
 		return $result;
 	}
 	private	function	combine(){
@@ -249,7 +249,7 @@ class	DocumentExtraction{
 		$result[$pointa]=$array;		//なんかここが邪魔くさい感じ
 
 
-		file_put_contents("result.txt",var_export($result,true)	);
+		//file_put_contents("result.txt",var_export($result,true)	);
 	return $result;
 	}
 	private	function	match(){

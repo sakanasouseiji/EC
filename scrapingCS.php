@@ -59,20 +59,21 @@ $ECsiteList=array(
 		//一律で置き換え、トリムできないパターンはこちらで処理する。
 		//車種確定用
 		"modifi"=>array(
-			"subjectName"=>"mongon"		//車種確定時の正規表現対象index、subject名
-		)
+			"tableName"=>"shashuIndex",	//車種確定用のテーブル名
+			"subjectName"=>"mongon",		//車種確定時の正規表現対象subject名
+			"addColum"=>"index_no",		//車種確定時の追加コラム名
+			"patternKey"=>array("seikihyougen_name","seikihyougen_year")	//同じく車種確定時のパターンキー。複数ある場合foreachで回して先行先読みでAND化
+		),
+		
 	)
 );
 $outputData="no,href,mongon,price\n";
-$shashuIndexTableName="shashuIndex";
-$indexArrayKeyColum="mongon";
 
 $siteGet=new siteGet();
 $putCsv=new putCsv();
 $putPrintR=new putPrintR();
 $db=new db();
 $shashuKakutei=new shashuKakutei($db);	//センス無いネーミング
-$modificationPatternKey=array("seikihyougen_name","seikihyougen_year");
 
 //サイトごとに取得、出力
 foreach($ECsiteList as $EC){
@@ -81,11 +82,12 @@ foreach($ECsiteList as $EC){
 
 	//車種確定(入力配列に)
 	$shashuKakutei->inputArray=$result;		//スクレイピング配列
-	$shashuKakutei->inputArrayKeyColum=$indexArrayKeyColum;	//正規表現対象カラム名(mongon)
+	$shashuKakutei->inputArrayKeyColum=$EC["modifi"]["subjectName"];	//正規表現対象カラム名(mongon)
 	$shashuKakutei->db=$db;		//db
-	$shashuKakutei->shashuIndexTableName=$shashuIndexTableName;	//車種インデックステーブル名
-	$shashuKakutei->modificationPatternKey=$modificationPatternKey;	//車種インデックスで利用するキー
-	$shashuKakutei->go();
+	$shashuKakutei->shashuIndexTableName=$EC["modifi"]["tableName"];	//車種インデックステーブル名
+	$shashuKakutei->modificationPatternKey=$EC["modifi"]["patternKey"];	//車種インデックスで利用するキー
+	$shashuKakutei->addColum=$EC["modifi"]["addColum"];	//車種インデックスで紐付けするカラム
+	$result=$shashuKakutei->go();
 	$index=$shashuKakutei->shashuIndex;	//車種インデックス出力(デバグ用)
 
 

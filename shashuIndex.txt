@@ -10,7 +10,7 @@ Array
             [shinaban] => BE-ELAD032
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 20(20|21)
+            [seikihyougen_year] => (20(20|21)|ELAD032)
             [tannitu_shouhin_flag] => 0
             [seikihyougen_name] => ギュット[\s]?アニーズ[\s]?dx
             [frame_size] => 
@@ -36,108 +36,6 @@ Array
 
     [1] => Array
         (
-            [index_no] => 18
-            [maker] => パナソニック
-            [series] => ギュット
-            [name] => ギュット･アニーズ・DX・26
-            [gentei_flag] => 0
-            [shinaban] => BE-ELAD632
-            [hatubaibi] => 0000-00-00
-            [year] => 2021
-            [seikihyougen_year] => 20(20|21)
-            [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => ギュット[\s]?アニーズ[\s]?dx[\s]?26
-            [frame_size] => 
-            [tire_size] => 26
-            [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 26×1.75 HE
-            [kibou_kouri_kakaku] => 139800
-            [volt] => 25.2
-            [ampere] => 16
-            [weight] => 34.3
-            [eco_mode_range] => 96
-            [auto_mode_range] => 70
-            [power_mode_range] => 60
-            [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 146
-            [konose_saitei_sinchou] => 162
-            [saddle_height] => 765
-            [rear_carrier] => クラス27標準装備
-            [teishou_frame_flag] => 0
-            [maerin_kudou_flag] => 0
-            [touroku_date] => 2021-08-10
-        )
-
-    [2] => Array
-        (
-            [index_no] => 17
-            [maker] => パナソニック
-            [series] => ギュット
-            [name] => ギュット・クルーム・DX
-            [gentei_flag] => 0
-            [shinaban] => BE-ELFD032A
-            [hatubaibi] => 0000-00-00
-            [year] => 2021
-            [seikihyougen_year] => 20(20|21)
-            [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => ギュット[\s]?クルーム[\s]?dx
-            [frame_size] => 
-            [tire_size] => 20
-            [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 20×1.95HE
-            [kibou_kouri_kakaku] => 149800
-            [volt] => 25.2
-            [ampere] => 16
-            [weight] => 32.9
-            [eco_mode_range] => 80
-            [auto_mode_range] => 60
-            [power_mode_range] => 50
-            [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 142
-            [konose_saitei_sinchou] => 154
-            [saddle_height] => 730
-            [rear_carrier] => クラス27標準装備
-            [teishou_frame_flag] => 0
-            [maerin_kudou_flag] => 0
-            [touroku_date] => 2021-08-10
-        )
-
-    [3] => Array
-        (
-            [index_no] => 16
-            [maker] => パナソニック
-            [series] => ギュット
-            [name] => ギュット・クルーム・EX
-            [gentei_flag] => 0
-            [shinaban] => BE-ELFE032A
-            [hatubaibi] => 0000-00-00
-            [year] => 2021
-            [seikihyougen_year] => 20(20|21)
-            [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => ギュット[\s]?クルーム[\s]?ex
-            [frame_size] => 
-            [tire_size] => 20
-            [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 20×1.95HE
-            [kibou_kouri_kakaku] => 165800
-            [volt] => 25.2
-            [ampere] => 16
-            [weight] => 33.3
-            [eco_mode_range] => 80
-            [auto_mode_range] => 60
-            [power_mode_range] => 50
-            [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 142
-            [konose_saitei_sinchou] => 154
-            [saddle_height] => 730
-            [rear_carrier] => クラス27標準装備
-            [teishou_frame_flag] => 0
-            [maerin_kudou_flag] => 0
-            [touroku_date] => 2021-08-10
-        )
-
-    [4] => Array
-        (
             [index_no] => 15
             [maker] => パナソニック
             [series] => ギュット
@@ -146,7 +44,7 @@ Array
             [shinaban] => BE-ELRD03
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 20(20|21)
+            [seikihyougen_year] => (20(20|21)|ELRD03)
             [tannitu_shouhin_flag] => 0
             [seikihyougen_name] => ギュット[\s]?クルームR[\s]?dx
             [frame_size] => 
@@ -170,41 +68,109 @@ Array
             [touroku_date] => 2021-08-10
         )
 
-    [5] => Array
+    [2] => Array
         (
-            [index_no] => 13
-            [maker] => ブリヂストン
-            [series] => 
-            [name] => ハイディ ツー
+            [index_no] => 16
+            [maker] => パナソニック
+            [series] => ギュット
+            [name] => ギュット・クルーム・EX
             [gentei_flag] => 0
-            [shinaban] => HY6B40
+            [shinaban] => BE-ELFE032A
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 20(20|21)
+            [seikihyougen_year] => (20(20|21)|ELFE032A)
             [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => (HYDEE|ハイディ)[\\s.ー]?(ツー|2|II)
+            [seikihyougen_name] => ギュット[\s]?クルーム[\s]?ex
             [frame_size] => 
-            [tire_size] => 26
+            [tire_size] => 20
             [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 26×1.95
-            [kibou_kouri_kakaku] => 154800
-            [volt] => 36.5
-            [ampere] => 9.9
-            [weight] => 30.9
-            [eco_mode_range] => 120
-            [auto_mode_range] => 85
-            [power_mode_range] => 52
+            [tire_size_shousai] => 20×1.95HE
+            [kibou_kouri_kakaku] => 165800
+            [volt] => 25.2
+            [ampere] => 16
+            [weight] => 33.3
+            [eco_mode_range] => 80
+            [auto_mode_range] => 60
+            [power_mode_range] => 50
             [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 145
-            [konose_saitei_sinchou] => 157
-            [saddle_height] => 745
+            [saitei_tekiou_sinchou] => 142
+            [konose_saitei_sinchou] => 154
+            [saddle_height] => 730
             [rear_carrier] => クラス27標準装備
             [teishou_frame_flag] => 0
             [maerin_kudou_flag] => 0
-            [touroku_date] => 2021-08-12
+            [touroku_date] => 2021-08-10
         )
 
-    [6] => Array
+    [3] => Array
+        (
+            [index_no] => 18
+            [maker] => パナソニック
+            [series] => ギュット
+            [name] => ギュット･アニーズ・DX・26
+            [gentei_flag] => 0
+            [shinaban] => BE-ELAD632
+            [hatubaibi] => 0000-00-00
+            [year] => 2021
+            [seikihyougen_year] => (20(20|21)|ELAD632)
+            [tannitu_shouhin_flag] => 0
+            [seikihyougen_name] => ギュット[\s]?アニーズ[\s]?dx[\s]?26
+            [frame_size] => 
+            [tire_size] => 26
+            [tannitu_tire_size_flag] => 1
+            [tire_size_shousai] => 26×1.75 HE
+            [kibou_kouri_kakaku] => 139800
+            [volt] => 25.2
+            [ampere] => 16
+            [weight] => 34.3
+            [eco_mode_range] => 96
+            [auto_mode_range] => 70
+            [power_mode_range] => 60
+            [hensoku] => 内装3段
+            [saitei_tekiou_sinchou] => 146
+            [konose_saitei_sinchou] => 162
+            [saddle_height] => 765
+            [rear_carrier] => クラス27標準装備
+            [teishou_frame_flag] => 0
+            [maerin_kudou_flag] => 0
+            [touroku_date] => 2021-08-10
+        )
+
+    [4] => Array
+        (
+            [index_no] => 17
+            [maker] => パナソニック
+            [series] => ギュット
+            [name] => ギュット・クルーム・DX
+            [gentei_flag] => 0
+            [shinaban] => BE-ELFD032A
+            [hatubaibi] => 0000-00-00
+            [year] => 2021
+            [seikihyougen_year] => (20(20|21)|ELFD032A)
+            [tannitu_shouhin_flag] => 0
+            [seikihyougen_name] => ギュット[\s]?クルーム[\s]?dx
+            [frame_size] => 
+            [tire_size] => 20
+            [tannitu_tire_size_flag] => 1
+            [tire_size_shousai] => 20×1.95HE
+            [kibou_kouri_kakaku] => 149800
+            [volt] => 25.2
+            [ampere] => 16
+            [weight] => 32.9
+            [eco_mode_range] => 80
+            [auto_mode_range] => 60
+            [power_mode_range] => 50
+            [hensoku] => 内装3段
+            [saitei_tekiou_sinchou] => 142
+            [konose_saitei_sinchou] => 154
+            [saddle_height] => 730
+            [rear_carrier] => クラス27標準装備
+            [teishou_frame_flag] => 0
+            [maerin_kudou_flag] => 0
+            [touroku_date] => 2021-08-10
+        )
+
+    [5] => Array
         (
             [index_no] => 14
             [maker] => パナソニック
@@ -214,7 +180,7 @@ Array
             [shinaban] => BE-ELRE03
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 20(20|21)
+            [seikihyougen_year] => (20(20|21)|ELRD03)
             [tannitu_shouhin_flag] => 0
             [seikihyougen_name] => ギュット[\s]?クルームR[\s]?ex
             [frame_size] => 
@@ -238,6 +204,40 @@ Array
             [touroku_date] => 2021-08-10
         )
 
+    [6] => Array
+        (
+            [index_no] => 13
+            [maker] => ブリヂストン
+            [series] => 
+            [name] => ハイディ ツー
+            [gentei_flag] => 0
+            [shinaban] => HY6B40
+            [hatubaibi] => 0000-00-00
+            [year] => 2021
+            [seikihyougen_year] => (20(20|21)|HY6B40)
+            [tannitu_shouhin_flag] => 0
+            [seikihyougen_name] => (HYDEE|ハイディ)[\\s.ー]?(ツー|2|II)
+            [frame_size] => 
+            [tire_size] => 26
+            [tannitu_tire_size_flag] => 1
+            [tire_size_shousai] => 26×1.95
+            [kibou_kouri_kakaku] => 154800
+            [volt] => 36.5
+            [ampere] => 9.9
+            [weight] => 30.9
+            [eco_mode_range] => 120
+            [auto_mode_range] => 85
+            [power_mode_range] => 52
+            [hensoku] => 内装3段
+            [saitei_tekiou_sinchou] => 145
+            [konose_saitei_sinchou] => 157
+            [saddle_height] => 745
+            [rear_carrier] => クラス27標準装備
+            [teishou_frame_flag] => 0
+            [maerin_kudou_flag] => 0
+            [touroku_date] => 2021-08-12
+        )
+
     [7] => Array
         (
             [index_no] => 12
@@ -248,9 +248,9 @@ Array
             [shinaban] => CC0C31
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 2021
+            [seikihyougen_year] => (2021|CC0C31)
             [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => アシスタ[\s]?(c|C)[\s]?(STD|ＳＴＤ|スタンダード)
+            [seikihyougen_name] => /アシスタ[\s]?(c)[\s]?(STD|スタンダード)/isu
             [frame_size] => 
             [tire_size] => 20
             [tannitu_tire_size_flag] => 0
@@ -282,7 +282,7 @@ Array
             [shinaban] => BG0B40
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 20(20|21)
+            [seikihyougen_year] => (20(20|21)|BG0B40)
             [tannitu_shouhin_flag] => 0
             [seikihyougen_name] => ビッケ[\s]?グリ[\s]?dd
             [frame_size] => 
@@ -316,7 +316,7 @@ Array
             [shinaban] => BP0C40
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 20(20|21)
+            [seikihyougen_year] => (20(20|21)|BP0C40)
             [tannitu_shouhin_flag] => 0
             [seikihyougen_name] => ビッケ[\s]?ポーラー[\s]?e
             [frame_size] => 
@@ -342,6 +342,40 @@ Array
 
     [10] => Array
         (
+            [index_no] => 8
+            [maker] => ヤマハ
+            [series] => PAS Babby
+            [name] => PAS Babby un
+            [gentei_flag] => 0
+            [shinaban] => PA20BXL
+            [hatubaibi] => 0000-00-00
+            [year] => 2021
+            [seikihyougen_year] => 20(20|21)
+            [tannitu_shouhin_flag] => 0
+            [seikihyougen_name] => (パス|pas).*(babby|バビー)[\s]?(un|アン)
+            [frame_size] => 
+            [tire_size] => 20
+            [tannitu_tire_size_flag] => 1
+            [tire_size_shousai] => 20×2.125HE
+            [kibou_kouri_kakaku] => 127000
+            [volt] => 25.5
+            [ampere] => 12.3
+            [weight] => 27.5
+            [eco_mode_range] => 60
+            [auto_mode_range] => 46
+            [power_mode_range] => 41
+            [hensoku] => 内装3段
+            [saitei_tekiou_sinchou] => 142
+            [konose_saitei_sinchou] => 146
+            [saddle_height] => 730
+            [rear_carrier] => クラス27標準装備
+            [teishou_frame_flag] => 0
+            [maerin_kudou_flag] => 0
+            [touroku_date] => 0000-00-00
+        )
+
+    [11] => Array
+        (
             [index_no] => 9
             [maker] => ブリヂストン
             [series] => ビッケ
@@ -350,7 +384,7 @@ Array
             [shinaban] => BM0B40
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 20(20|21)
+            [seikihyougen_year] => (20(20|21)|BM0B40)
             [tannitu_shouhin_flag] => 0
             [seikihyougen_name] => ビッケ[\s]?モブ[\s]?dd
             [frame_size] => 
@@ -374,75 +408,7 @@ Array
             [touroku_date] => 2021-08-10
         )
 
-    [11] => Array
-        (
-            [index_no] => 8
-            [maker] => ヤマハ
-            [series] => PAS Babby
-            [name] => PAS Babby un
-            [gentei_flag] => 0
-            [shinaban] => PA20BXL
-            [hatubaibi] => 0000-00-00
-            [year] => 2021
-            [seikihyougen_year] => 20(20|21)
-            [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => pas.*babby[\s]?un
-            [frame_size] => 
-            [tire_size] => 20
-            [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 20×2.125HE
-            [kibou_kouri_kakaku] => 127000
-            [volt] => 25.5
-            [ampere] => 12.3
-            [weight] => 27.5
-            [eco_mode_range] => 60
-            [auto_mode_range] => 46
-            [power_mode_range] => 41
-            [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 142
-            [konose_saitei_sinchou] => 146
-            [saddle_height] => 730
-            [rear_carrier] => クラス27標準装備
-            [teishou_frame_flag] => 0
-            [maerin_kudou_flag] => 0
-            [touroku_date] => 0000-00-00
-        )
-
     [12] => Array
-        (
-            [index_no] => 7
-            [maker] => ヤマハ
-            [series] => PAS Babby
-            [name] => PAS Babby un SPリヤチャイルドシート標準装備モデル
-            [gentei_flag] => 0
-            [shinaban] => PA20BSPR
-            [hatubaibi] => 0000-00-00
-            [year] => 2021
-            [seikihyougen_year] => 20(20|21)
-            [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => pas.*babby[\s]?un[\s]?SP[\s]?リヤチャイルドシート(標準装備|付)
-            [frame_size] => 
-            [tire_size] => 20
-            [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 20×2.125HE
-            [kibou_kouri_kakaku] => 142000
-            [volt] => 25.5
-            [ampere] => 15.4
-            [weight] => 32.9
-            [eco_mode_range] => 75
-            [auto_mode_range] => 58
-            [power_mode_range] => 51
-            [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 142
-            [konose_saitei_sinchou] => 146
-            [saddle_height] => 730
-            [rear_carrier] => クラス27標準装備
-            [teishou_frame_flag] => 0
-            [maerin_kudou_flag] => 0
-            [touroku_date] => 0000-00-00
-        )
-
-    [13] => Array
         (
             [index_no] => 6
             [maker] => ヤマハ
@@ -454,7 +420,7 @@ Array
             [year] => 2021
             [seikihyougen_year] => 20(20|21)
             [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => pas.*babby[\s]?un.*チャイルドシート(標準装備|付)
+            [seikihyougen_name] => (pas|パス).*(babby|バビー)[\s]?(un|アン).*チャイルドシート(標準装備|付)
             [frame_size] => 
             [tire_size] => 20
             [tannitu_tire_size_flag] => 1
@@ -476,41 +442,41 @@ Array
             [touroku_date] => 0000-00-00
         )
 
-    [14] => Array
+    [13] => Array
         (
-            [index_no] => 5
-            [maker] => ヤマハ
-            [series] => PAS Crew
-            [name] => PAS Crew
+            [index_no] => 1
+            [maker] => 丸石
+            [series] => ふらっか〜ず
+            [name] => ふらっか〜ずシュシュ アシスト
             [gentei_flag] => 0
-            [shinaban] => PA24C
+            [shinaban] => ASFRCH203E
             [hatubaibi] => 0000-00-00
             [year] => 2021
             [seikihyougen_year] => 2021
             [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => pas[\s]?Crew
+            [seikihyougen_name] => (ふらっか〜ず|ふらっかーず|フラッカーズ)[\s]?シュシュ[\s]?アシスト
             [frame_size] => 
-            [tire_size] => 24
+            [tire_size] => 20
             [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 24×2.0HE
-            [kibou_kouri_kakaku] => 153000
-            [volt] => 25.5
-            [ampere] => 15.4
-            [weight] => 35.4
-            [eco_mode_range] => 78
-            [auto_mode_range] => 60
-            [power_mode_range] => 56
+            [tire_size_shousai] => 20×1.95
+            [kibou_kouri_kakaku] => 125000
+            [volt] => 36
+            [ampere] => 10.4
+            [weight] => 30.5
+            [eco_mode_range] => 80
+            [auto_mode_range] => 55
+            [power_mode_range] => 44
             [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 145
-            [konose_saitei_sinchou] => 150
-            [saddle_height] => 745
+            [saitei_tekiou_sinchou] => 142
+            [konose_saitei_sinchou] => 155
+            [saddle_height] => 770
             [rear_carrier] => クラス27標準装備
             [teishou_frame_flag] => 0
             [maerin_kudou_flag] => 0
-            [touroku_date] => 2021-08-02
+            [touroku_date] => 2021-07-27
         )
 
-    [15] => Array
+    [14] => Array
         (
             [index_no] => 2
             [maker] => 丸石
@@ -544,30 +510,30 @@ Array
             [touroku_date] => 2021-07-27
         )
 
-    [16] => Array
+    [15] => Array
         (
-            [index_no] => 3
+            [index_no] => 7
             [maker] => ヤマハ
-            [series] => PAS Kiss
-            [name] => PAS Kiss mini un sp
+            [series] => PAS Babby
+            [name] => PAS Babby un SPリヤチャイルドシート標準装備モデル
             [gentei_flag] => 0
-            [shinaban] => PA20KSP
+            [shinaban] => PA20BSPR
             [hatubaibi] => 0000-00-00
             [year] => 2021
-            [seikihyougen_year] => 2021
+            [seikihyougen_year] => 20(20|21)
             [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => pas.*?kiss[\s]?mini[\s]?un[\s]?(sp|スーパー)
+            [seikihyougen_name] => (パス|pas).*(babby|バビー)[\s]?(un|アン)[\s]?(SP|スーパー)
             [frame_size] => 
             [tire_size] => 20
             [tannitu_tire_size_flag] => 1
             [tire_size_shousai] => 20×2.125HE
-            [kibou_kouri_kakaku] => 148000
+            [kibou_kouri_kakaku] => 142000
             [volt] => 25.5
             [ampere] => 15.4
-            [weight] => 31.2
-            [eco_mode_range] => 78
-            [auto_mode_range] => 59
-            [power_mode_range] => 53
+            [weight] => 32.9
+            [eco_mode_range] => 75
+            [auto_mode_range] => 58
+            [power_mode_range] => 51
             [hensoku] => 内装3段
             [saitei_tekiou_sinchou] => 142
             [konose_saitei_sinchou] => 146
@@ -575,10 +541,10 @@ Array
             [rear_carrier] => クラス27標準装備
             [teishou_frame_flag] => 0
             [maerin_kudou_flag] => 0
-            [touroku_date] => 2021-08-02
+            [touroku_date] => 0000-00-00
         )
 
-    [17] => Array
+    [16] => Array
         (
             [index_no] => 4
             [maker] => ヤマハ
@@ -590,7 +556,7 @@ Array
             [year] => 2021
             [seikihyougen_year] => 2021
             [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => pas.*?kiss[\s]?mini[\s]?un
+            [seikihyougen_name] => (pas|パス).*?(kiss|キス)[\s]?(mini|ミニ)[\s]?(un|アン)
             [frame_size] => 
             [tire_size] => 20
             [tannitu_tire_size_flag] => 1
@@ -612,38 +578,106 @@ Array
             [touroku_date] => 2021-08-02
         )
 
+    [17] => Array
+        (
+            [index_no] => 20
+            [maker] => ヤマハ
+            [series] => PAS Kiss
+            [name] => PAS Kiss mini un
+            [gentei_flag] => 0
+            [shinaban] => PA20KXL
+            [hatubaibi] => 0000-00-00
+            [year] => 2020
+            [seikihyougen_year] => 2020
+            [tannitu_shouhin_flag] => 0
+            [seikihyougen_name] => (pas|パス).*?(kiss|キス)[\s]?(mini|ミニ)[\s]?(un|アン)
+            [frame_size] => 
+            [tire_size] => 20
+            [tannitu_tire_size_flag] => 1
+            [tire_size_shousai] => 20×2.125HE
+            [kibou_kouri_kakaku] => 144000
+            [volt] => 25.5
+            [ampere] => 12.3
+            [weight] => 30.4
+            [eco_mode_range] => 62
+            [auto_mode_range] => 47
+            [power_mode_range] => 42
+            [hensoku] => 内装3段
+            [saitei_tekiou_sinchou] => 142
+            [konose_saitei_sinchou] => 146
+            [saddle_height] => 730
+            [rear_carrier] => クラス27標準装備
+            [teishou_frame_flag] => 0
+            [maerin_kudou_flag] => 0
+            [touroku_date] => 2021-08-02
+        )
+
     [18] => Array
         (
-            [index_no] => 1
-            [maker] => 丸石
-            [series] => ふらっか〜ず
-            [name] => ふらっか〜ずシュシュ アシスト
+            [index_no] => 5
+            [maker] => ヤマハ
+            [series] => PAS Crew
+            [name] => PAS Crew
             [gentei_flag] => 0
-            [shinaban] => ASFRCH203E
+            [shinaban] => PA24C
             [hatubaibi] => 0000-00-00
             [year] => 2021
             [seikihyougen_year] => 2021
             [tannitu_shouhin_flag] => 0
-            [seikihyougen_name] => (ふらっか〜ず|ふらっかーず|フラッカーズ)[\s]?シュシュ[\s]?アシスト
+            [seikihyougen_name] => (パス|pas)[\s]?(クルー|Crew)
             [frame_size] => 
-            [tire_size] => 20
+            [tire_size] => 24
             [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 20×1.95
-            [kibou_kouri_kakaku] => 125000
-            [volt] => 36
-            [ampere] => 10.4
-            [weight] => 30.5
-            [eco_mode_range] => 80
-            [auto_mode_range] => 55
-            [power_mode_range] => 44
+            [tire_size_shousai] => 24×2.0HE
+            [kibou_kouri_kakaku] => 153000
+            [volt] => 25.5
+            [ampere] => 15.4
+            [weight] => 35.4
+            [eco_mode_range] => 78
+            [auto_mode_range] => 60
+            [power_mode_range] => 56
             [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 142
-            [konose_saitei_sinchou] => 155
-            [saddle_height] => 770
+            [saitei_tekiou_sinchou] => 145
+            [konose_saitei_sinchou] => 150
+            [saddle_height] => 745
             [rear_carrier] => クラス27標準装備
             [teishou_frame_flag] => 0
             [maerin_kudou_flag] => 0
-            [touroku_date] => 2021-07-27
+            [touroku_date] => 2021-08-02
+        )
+
+    [19] => Array
+        (
+            [index_no] => 3
+            [maker] => ヤマハ
+            [series] => PAS Kiss
+            [name] => PAS Kiss mini un sp
+            [gentei_flag] => 0
+            [shinaban] => PA20KSP
+            [hatubaibi] => 0000-00-00
+            [year] => 2021
+            [seikihyougen_year] => 2021
+            [tannitu_shouhin_flag] => 0
+            [seikihyougen_name] => (pas|パス).*?(kiss|キス)[\s]?(mini|ミニ)[\s]?(un|アン)[\s]?(sp|スーパー)
+            [frame_size] => 
+            [tire_size] => 20
+            [tannitu_tire_size_flag] => 1
+            [tire_size_shousai] => 20×2.125HE
+            [kibou_kouri_kakaku] => 148000
+            [volt] => 25.5
+            [ampere] => 15.4
+            [weight] => 31.2
+            [eco_mode_range] => 78
+            [auto_mode_range] => 59
+            [power_mode_range] => 53
+            [hensoku] => 内装3段
+            [saitei_tekiou_sinchou] => 142
+            [konose_saitei_sinchou] => 146
+            [saddle_height] => 730
+            [rear_carrier] => クラス27標準装備
+            [teishou_frame_flag] => 0
+            [maerin_kudou_flag] => 0
+            [touroku_date] => 2021-08-02
         )
 
 )

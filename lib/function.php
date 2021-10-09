@@ -96,9 +96,9 @@ class	shashuKakutei{
 
 
 				if(	preg_match($pattern,$subject,$match)	){
-					print $key."\r\n";	
-					print_r($inputArray[$i]);
-					print_r(	array($addColum=>$jitensha[$addColum])	);
+					//print $key."\r\n";	
+					//print_r($inputArray[$i]);
+					//print_r(	array($addColum=>$jitensha[$addColum])	);
 					$inputArray[$i]+=array(	$addColum=>$jitensha[$addColum]	);
 					break;
 				}

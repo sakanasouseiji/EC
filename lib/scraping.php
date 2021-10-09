@@ -10,14 +10,18 @@ class siteGet{
 		$scraping=new scraping();
 		$documentExtraction=new DocumentExtraction();
 		$result=array();
+
+		$currentPage=$EC["startPageNo"];
+		$nextPage=$EC["nextPageNo"];
 		//$modification=new modification();	//今の所意味なし
 
 
 
 		//一覧ページ(アウトラインもしくはディティールでfalseが出たらページ終了と判断して終わり)
 		do{
-			print $EC["Url"].$EC["startPageNo"]."\n";
-			$scraping->url=$EC["Url"].$EC["startPageNo"];
+			$scraping->url=str_replace("|",$currentPage,$EC["url"]);
+			print $scraping->url."\r\n";
+
 			$documentExtraction->subject=$scraping->go();
 			$documentExtraction->outlinePattern=$EC["outlinePattern"];
 			$documentExtraction->detailsPattern=$EC["detailsPattern"];
@@ -28,7 +32,7 @@ class siteGet{
 			$subject=$documentExtraction->pageGet();
 			$pageResult=$subject;
 
-			++$EC["startPageNo"];
+			$currentPage=$currentPage+$nextPage;
 			if(	$pageResult!==false	){
 				$result=array_merge($result,$pageResult);
 			}
@@ -40,11 +44,10 @@ class siteGet{
 
 
 
-
 //スクレイピングクラス
 class scraping{
 
-	//最終的にアクセスしたいページ
+	//最終的にアクセスしたいページ	
 	public	$url;	
 	//クッキー取得のためのURL
 	//ここにアクセスすればクッキーにフラグが立つというページ
@@ -52,6 +55,8 @@ class scraping{
 
 	//スクレイピング実行
 	function	go(){
+
+
 
 		if($this->url==null){
 			print "error! no address!\r\n";

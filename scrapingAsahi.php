@@ -5,7 +5,7 @@ require_once("./lib/function.php");
 
 //dbパラメーター
 require_once($_SERVER["DOCUMENT_ROOT"]."dbPath/scrapingDBParameter.php");
-//スクレイピングの実行サンプル。例としてサイクルスポットを使う
+//スクレイピングの実行サンプル。例としてサイクルベースあさひを使う
 //備忘録
 //サイトurlを指定してスクレイピング
 //その中から正規表現を使ってアウトラインパターンから一度抜き出し、
@@ -15,16 +15,19 @@ require_once($_SERVER["DOCUMENT_ROOT"]."dbPath/scrapingDBParameter.php");
 
 
 
-//サンプル、サイクルスポット電動自転車安いもの順
+//サンプル、サイクルベースあさひ子乗せ電動自転車安いもの順
+$i="";
 $ECsiteList=array(
-	"CycleSpot"=>array(		//サイクルスポット
-		"Name"=>"cyclespot",	//サイト名,吐き出すファイル名にもなる
-		//"Url"=>"https://cyclespot.jp/store/CategoryList.aspx?ccd=F1000518&wkcd=F1000510&SKEY=price&SORDER=0&page=",	//スクレイピングするurl(電動自転車全体)
-		"url"=>"https://cyclespot.jp/store/CategoryList.aspx?ccd=F1000544&wkcd=F1000510-F1000518&SKEY=price&SORDER=0&page=|",	//スクレイピングするurl(子乗せ電動自転車)pageナンバーは"|"で記述すること。
+	"CycleBaseAsahi"=>array(		//サイクルベースあさひ
+		"Name"=>"CycleBaseAsahi",	//サイト名,吐き出すファイル名にもなる
 		"startPageNo"=>"0",	//最初のページナンバー
-		"nextPageNo"=>"1",	//次のページナンバー
+		"nextPageNo"=>"36",	//次のページナンバー
+		"Url"=>"https://ec.cb-asahi.co.jp/category/cat2/%E9%9B%BB%E5%8B%95%E8%87%AA%E8%BB%A2%E8%BB%8A/%E3%83%81%E3%83%A3%E3%82%A4%E3%83%AB%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%E4%BB%98|/?isort=price",	//スクレイピングするurl(子乗せ電動自転車)ページナンバーは"|"で記述すること
+		"startPageNo"=>"0",	//最初のページナンバー
+		"nextPageNo"=>"36",	//次のページナンバー
 		"FileName"=>"CycleSpot.html",	//吐き出すファイル名
 		"outlinePattern"=>"/並び順.[\s\S]*?pagination/iu",	//アウトラインパターン
+
 		"detailsPattern"=>	//ディティールパターン	
 		"/(lis_mk.[\s\S]*?sclistanc)|".
 		"(lis_nm\">.[\s\S]*?<\/span>)|".
@@ -53,6 +56,8 @@ $ECsiteList=array(
 			"$2",
 			"$2$3"
 		),
+
+
 		//特殊修正
 		//一律で置き換え、トリムできないパターンはこちらで処理する。
 		//車種確定用

@@ -148,6 +148,11 @@ class	db{
 	public	$PDO;
 	public	$dbParameter;
 
+	//wrightAll時の既定パラメーター
+	private	$dt;	//DateTime
+	private	$wrightAllTableName;
+	private	$wrightAllInputArray;
+
 	//db基本情報読み込み
 	function	__construct(){
 		$this->dbParameter=new dbParameter();
@@ -156,6 +161,11 @@ class	db{
 		$this->dbName=$this->dbParameter->dbName;
 		$this->dbUser=$this->dbParameter->dbUser;
 		$this->dbPass=$this->dbParameter->dbPass;
+
+		$this->dt=new DateTime();
+
+		$this->wrightAllTableName=null;	//デフォでnull、メソッド内でチェックしてnullのままだとエラーにする。
+		$this->wrightAllInputArray=null;	//デフォでnull、メソッド内でチェックしてnullのままだとtableNameと同じにする。
 	}
 	
 	//dbオープン
@@ -204,6 +214,38 @@ class	db{
 		$stmt=$this->PDO->query($query);
 		$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
 		return $result;
+	}
+
+	//全書き込み、指定配列を書き込む
+	//引数がひとつだけの場合は
+	function	wrightAll($table=null,$inputArray=null){
+
+		//引数チェック
+		if(	is_null($table)	){
+			if(	is_null($inputArray)	){
+				//引数が両方とも設定されていない場合
+				print "no parameter error!!\r\n";
+				exit();
+			}
+		}
+
+		//wrightAllパラメーター設定
+		$today=$this->dt->format("Ymd");
+		$inputArray="uknown".$today;	//未設定の場合の既定テーブル名
+
+
+		if(	!is_array($table)	){
+			//引数に配列が設定されている場合(inputArrayだけ設定されている)
+
+		}else{
+			//引数が配列以外の場合(tableの場合)	*
+			print "no parameter error!!\r\n";
+			exit();
+		}
+		//引数が2つとも設定されている場合
+
+
+
 	}
 
 

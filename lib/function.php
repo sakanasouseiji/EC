@@ -164,8 +164,12 @@ class	db{
 
 		$this->dt=new DateTime();
 
-		$this->wrightAllTableName=null;	//デフォでnull、メソッド内でチェックしてnullのままだとエラーにする。
-		$this->wrightAllInputArray=null;	//デフォでnull、メソッド内でチェックしてnullのままだとtableNameと同じにする。
+		//全書き込み入力配列設定
+		$this->wrightAllInputArray=null;	//デフォでnull。
+		//全書き込みデフォルトテーブル名設定
+		$today=$this->dt->format("Ymd");
+		$this->wrightAllTaleName="uknown".$today;	//未設定の場合の既定テーブル名
+
 	}
 	
 	//dbオープン
@@ -229,20 +233,16 @@ class	db{
 			}
 		}
 
-		//wrightAllパラメーター設定
-		$today=$this->dt->format("Ymd");
-		$inputArray="uknown".$today;	//未設定の場合の既定テーブル名
-
 
 		if(	!is_array($table)	){
 			//引数に配列が設定されている場合(inputArrayだけ設定されている)
+			$table=$this->wrightAllTableName;
 
 		}else{
 			//引数が配列以外の場合(tableの場合)	*
 			print "no parameter error!!\r\n";
 			exit();
 		}
-		//引数が2つとも設定されている場合
 
 
 

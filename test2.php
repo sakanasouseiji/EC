@@ -1,23 +1,14 @@
 <?php
-//classの引数のテスト
-$tc=new	testClass();
+//配列の追加のテスト
+print "<pre>";
+$array=array("a"=>"アッポー","b"=>"ボムバー","c"=>"クラス","d"=>"ダイナマイト");
+var_dump($array);
 
-print "引数を与えなかった場合\r\n";
-$tc->go();
-
-print "引数を一つだけ与えた場合(hoge)\r\n";
-$tc->go("hoge");
-
-print "引数を二つ与えた場合(gebo,gebobo)\r\n";
-$tc->go("gebo","gebobo");
+$array+=array("c"=>"チェイサー");
+var_dump($array);
 
 
-class	testClass{
-	public	$inputArray;
-	public	$tableName;
-	function	go($inputArray="あれい",$tableName="unknown"){
-		print $inputArray.",";
-		print $tableName."\r\n";
-	}
-}
+$array+=array("d"=>"ドラゴン");
+var_dump($array);
+print "</pre>";
 ?>

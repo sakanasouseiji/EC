@@ -1,0 +1,79 @@
+Array
+(
+    [0] => preg_match("/(ふらっか〜ず|ふらっかーず|フラッカーズ)[\s]?ココッティ[\s]?アシスト/ius","丸石サイクル 電動自転車 子供乗せ 2021 ふらっかーずココッティアシスト マルイシ maruishi 20インチ 10.4Ah 3段変速 オートライト  ASFRR203Y","ふらっかーずココッティアシスト"),そのときの$jitensha:2
+    [1] => preg_match("/2021/ius","丸石サイクル 電動自転車 子供乗せ 2021 ふらっかーずココッティアシスト マルイシ maruishi 20インチ 10.4Ah 3段変速 オートライト  ASFRR203Y","2021"),そのときの$jitensha:2
+    [2] => フラグ！！！！
+
+    [3] => preg_match("/(パス|pas).*(バビー|babby)[\s]?(アン|un).*チャイルドシート(標準装備|付)/ius","ヤマハ 電動自転車 子供乗せ 2020 パス バビー アンリヤチャイルドシート標準装備 YAMAHA 12.3h 3段変速 PA20EGXB0J","パス バビー アンリヤチャイルドシート標準装備"),そのときの$jitensha:6
+    [4] => preg_match("/(パス|pas).*(バビー|babby)[\s]?(アン|un)/ius","ヤマハ 電動自転車 子供乗せ 2020 パス バビー アンリヤチャイルドシート標準装備 YAMAHA 12.3h 3段変速 PA20EGXB0J","パス バビー アン"),そのときの$jitensha:8
+    [5] => preg_match("/(パス|pas).*?(キス|kiss)[\s]?(ミニ|mini)[\s]?(アン|un)/ius","ヤマハ 電動自転車 2021年 パス キッス ミニ アン YAMAHA 20インチ 12.3Ah 3段変速 PAS Kiss mini un PA20FGXK1J","パス キッス ミニ アン YAMAHA 20インチ 12.3Ah 3段変速 PAS Kiss mini un"),そのときの$jitensha:4
+    [6] => preg_match("/2021/ius","ヤマハ 電動自転車 2021年 パス キッス ミニ アン YAMAHA 20インチ 12.3Ah 3段変速 PAS Kiss mini un PA20FGXK1J","2021"),そのときの$jitensha:4
+    [7] => フラグ！！！！
+
+    [8] => preg_match("/ギュット[\s]?アニーズ[\s]?dx/ius","パナソニック 電動自転車 子供乗せ ギュット アニーズ DX Panasonic 20インチ 16.0Ah 3段変速 BE-ELAD032","ギュット アニーズ DX"),そのときの$jitensha:19
+    [9] => preg_match("/2020|2021|ELAD032/ius","パナソニック 電動自転車 子供乗せ ギュット アニーズ DX Panasonic 20インチ 16.0Ah 3段変速 BE-ELAD032","ELAD032"),そのときの$jitensha:19
+    [10] => フラグ！！！！
+
+    [11] => preg_match("/アシスタ[\s]?(c|C)[\s]?(STD|ＳＴＤ|スタンダード)/ius","ブリヂストン 電動自転車 子供乗せ アシスタC STD ブリジストン BRIDGESTONE 20インチ 12.3Ah 3段変速 オートライト CC0C31","アシスタC STD"),そのときの$jitensha:12
+    [12] => preg_match("/CC0C31|2021/ius","ブリヂストン 電動自転車 子供乗せ アシスタC STD ブリジストン BRIDGESTONE 20インチ 12.3Ah 3段変速 オートライト CC0C31","CC0C31"),そのときの$jitensha:12
+    [13] => フラグ！！！！
+
+    [14] => preg_match("/(パス|pas).*(バビー|babby)[\s]?(アン|un)[\s]?(sp|ＳＰ|スーパー)/ius","ヤマハ 電動自転車 2021年 パス バビー アン スーパー YAMAHA 20インチ 15.4Ah 3段変速 PAS Babby un SP PA20FGSB1J","パス バビー アン スーパー YAMAHA 20インチ 15.4Ah 3段変速 PAS Babby un SP"),そのときの$jitensha:7
+    [15] => preg_match("/2021/ius","ヤマハ 電動自転車 2021年 パス バビー アン スーパー YAMAHA 20インチ 15.4Ah 3段変速 PAS Babby un SP PA20FGSB1J","2021"),そのときの$jitensha:7
+    [16] => フラグ！！！！
+
+    [17] => preg_match("/ギュット[\s]?クルームR[\s]?dx/ius","パナソニック 電動自転車 子供乗せ ギュット クルームR DX Panasonic 16Ah 3段変速 オートライト BE-ELRD03","ギュット クルームR DX"),そのときの$jitensha:15
+    [18] => preg_match("/2020|2021|ELRD03/ius","パナソニック 電動自転車 子供乗せ ギュット クルームR DX Panasonic 16Ah 3段変速 オートライト BE-ELRD03","ELRD03"),そのときの$jitensha:15
+    [19] => フラグ！！！！
+
+    [20] => preg_match("/ギュット[\s]?アニーズ[\s]?dx[\s]?26/ius","パナソニック 電動自転車 子供乗せ ギュット アニーズ DX26 Panasonic 16.0Ah 3段変速 オートライト BE-ELAD632","ギュット アニーズ DX26"),そのときの$jitensha:18
+    [21] => preg_match("/2020|2021|ELAD632/ius","パナソニック 電動自転車 子供乗せ ギュット アニーズ DX26 Panasonic 16.0Ah 3段変速 オートライト BE-ELAD632","ELAD632"),そのときの$jitensha:18
+    [22] => フラグ！！！！
+
+    [23] => preg_match("/ビッケ[\s]?(ポーラー|ポ―ラ―)/ius","ブリヂストン 電動自転車 子供乗せ ビッケポーラー bikke POLARR e ブリジストン BRIDGESTONE 15.4Ah 3段変速 BP0C40","ビッケポーラー"),そのときの$jitensha:10
+    [24] => preg_match("/2020|2021|BP0C40/ius","ブリヂストン 電動自転車 子供乗せ ビッケポーラー bikke POLARR e ブリジストン BRIDGESTONE 15.4Ah 3段変速 BP0C40","BP0C40"),そのときの$jitensha:10
+    [25] => フラグ！！！！
+
+    [26] => preg_match("/ビッケ[\s]?グリ/ius","ブリヂストン 電動自転車 子供乗せ ビッケグリ bikke GRI ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BG0B40","ビッケグリ"),そのときの$jitensha:11
+    [27] => preg_match("/2020|2021|BG0B40/ius","ブリヂストン 電動自転車 子供乗せ ビッケグリ bikke GRI ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BG0B40","BG0B40"),そのときの$jitensha:11
+    [28] => フラグ！！！！
+
+    [29] => preg_match("/ビッケ[\s]?モブ/ius","ブリヂストン 電動自転車 子供乗せ ビッケモブ bikke MOB ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BM0B40","ビッケモブ"),そのときの$jitensha:9
+    [30] => preg_match("/2020|2021|BM0B40/ius","ブリヂストン 電動自転車 子供乗せ ビッケモブ bikke MOB ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BM0B40","BM0B40"),そのときの$jitensha:9
+    [31] => フラグ！！！！
+
+    [32] => preg_match("/ギュット[\s]?アニーズ[\s]?dx/ius","パナソニック 電動自転車 子供乗せ 2022年 ギュットアニーズ DX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-ELAD033 パナソニックフェア","ギュットアニーズ DX"),そのときの$jitensha:19
+    [33] => preg_match("/ギュット[\s]?アニーズ[\s]?dx[\s]?26/ius","パナソニック 電動自転車 子供乗せ 2022年 ギュットアニーズ DX26 Panasonic 26インチ 16Ah 3段変速 オートライト  BE-ELAD633 パナソニックフェア","ギュットアニーズ DX26"),そのときの$jitensha:18
+    [34] => preg_match("/ギュット[\s]?アニーズ[\s]?dx/ius","パナソニック 電動自転車 子供乗せ 2022年 ギュットアニーズ DX26 Panasonic 26インチ 16Ah 3段変速 オートライト  BE-ELAD633 パナソニックフェア","ギュットアニーズ DX"),そのときの$jitensha:19
+    [35] => preg_match("/ギュット[\s]?クルーム[\s]?dx/ius","パナソニック 電動自転車 2021年 ギュット クルーム DX Panasonic 20インチ 	16Ah 3段変速 オートライト BE-ELFD032A","ギュット クルーム DX"),そのときの$jitensha:17
+    [36] => preg_match("/2020|2021|ELFD032A/ius","パナソニック 電動自転車 2021年 ギュット クルーム DX Panasonic 20インチ 	16Ah 3段変速 オートライト BE-ELFD032A","2021"),そのときの$jitensha:17
+    [37] => フラグ！！！！
+
+    [38] => preg_match("/(パス|pas).*(バビー|babby)[\s]?(アン|un).*チャイルドシート(標準装備|付)/ius","ヤマハ 電動自転車 2022年 パス バビー アン スーパー リヤチャイルドシート標準装備モデル YAMAHA 20インチ 15.4Ah 3段変速 オートライト  PA20GGSB2J","パス バビー アン スーパー リヤチャイルドシート標準装備"),そのときの$jitensha:6
+    [39] => preg_match("/(パス|pas).*(バビー|babby)[\s]?(アン|un)[\s]?(sp|ＳＰ|スーパー)/ius","ヤマハ 電動自転車 2022年 パス バビー アン スーパー リヤチャイルドシート標準装備モデル YAMAHA 20インチ 15.4Ah 3段変速 オートライト  PA20GGSB2J","パス バビー アン スーパー"),そのときの$jitensha:7
+    [40] => preg_match("/(パス|pas).*(バビー|babby)[\s]?(アン|un)/ius","ヤマハ 電動自転車 2022年 パス バビー アン スーパー リヤチャイルドシート標準装備モデル YAMAHA 20インチ 15.4Ah 3段変速 オートライト  PA20GGSB2J","パス バビー アン"),そのときの$jitensha:8
+    [41] => preg_match("/ギュット[\s]?クルームR[\s]?dx/ius","パナソニック 電動自転車 子供乗せ 2022年 ギュットクルームR DX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-FRD031 パナソニックフェア","ギュットクルームR DX"),そのときの$jitensha:15
+    [42] => preg_match("/(パス|pas).*?(キス|kiss)[\s]?(ミニ|mini)[\s]?(アン|un).*(sp|ＳＰ|スーパー)/ius","ヤマハ 電動自転車 2021年 パス キス ミニ アン スーパー YAMAHA 20インチ 	15.4Ah 3段変速 PAS Kiss mini un SP PA20FGSK1J","パス キス ミニ アン スーパー YAMAHA 20インチ 	15.4Ah 3段変速 PAS Kiss mini un SP"),そのときの$jitensha:3
+    [43] => preg_match("/2021/ius","ヤマハ 電動自転車 2021年 パス キス ミニ アン スーパー YAMAHA 20インチ 	15.4Ah 3段変速 PAS Kiss mini un SP PA20FGSK1J","2021"),そのときの$jitensha:3
+    [44] => フラグ！！！！
+
+    [45] => preg_match("/(HYDEE|ハイディ)[\\s.ー－]?(ツー|2|II)/ius","ブリヂストン 電動自転車 子供乗せ ハイディー2 ブリジストン BRIDGESTONE 9.9Ah 3段変速 オートライト HY6B40","ハイディー2"),そのときの$jitensha:13
+    [46] => preg_match("/2020|2021|HY6B40/ius","ブリヂストン 電動自転車 子供乗せ ハイディー2 ブリジストン BRIDGESTONE 9.9Ah 3段変速 オートライト HY6B40","HY6B40"),そのときの$jitensha:13
+    [47] => フラグ！！！！
+
+    [48] => preg_match("/ギュット[\s]?クルームR[\s]?ex/ius","パナソニック 電動自転車 子供乗せ ギュット クルームR EX Panasonic16.0Ah 3段変速 BE-ELRE03","ギュット クルームR EX"),そのときの$jitensha:14
+    [49] => preg_match("/2020|2021|ELRE03/ius","パナソニック 電動自転車 子供乗せ ギュット クルームR EX Panasonic16.0Ah 3段変速 BE-ELRE03","ELRE03"),そのときの$jitensha:14
+    [50] => フラグ！！！！
+
+    [51] => preg_match("/pas[\s]?Crew/ius","ヤマハ 電動自転車 2021年 パス クルー YAMAHA 24インチ 15.4Ah 3段変速 PAS Crew PA24CGC1J","PAS Crew"),そのときの$jitensha:5
+    [52] => preg_match("/2021/ius","ヤマハ 電動自転車 2021年 パス クルー YAMAHA 24インチ 15.4Ah 3段変速 PAS Crew PA24CGC1J","2021"),そのときの$jitensha:5
+    [53] => フラグ！！！！
+
+    [54] => preg_match("/ギュット[\s]?クルーム[\s]?dx/ius","パナソニック 電動自転車 子供乗せ 2022年 ギュットクルーム DX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-ELFD033 パナソニックフェア","ギュットクルーム DX"),そのときの$jitensha:17
+    [55] => preg_match("/ギュット[\s]?クルーム[\s]?ex/ius","パナソニック 電動自転車 2021年 ギュット クルーム EX Panasonic 20インチ 	16Ah 3段変速 オートライト BE-ELFE032A","ギュット クルーム EX"),そのときの$jitensha:16
+    [56] => preg_match("/2020|2021|ELFE032A/ius","パナソニック 電動自転車 2021年 ギュット クルーム EX Panasonic 20インチ 	16Ah 3段変速 オートライト BE-ELFE032A","2021"),そのときの$jitensha:16
+    [57] => フラグ！！！！
+
+    [58] => preg_match("/ギュット[\s]?クルームR[\s]?ex/ius","パナソニック 電動自転車 子供乗せ 2022年 ギュットクルームR EX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-FRE031 パナソニックフェア","ギュットクルームR EX"),そのときの$jitensha:14
+    [59] => preg_match("/ギュット[\s]?クルーム[\s]?ex/ius","パナソニック 電動自転車 子供乗せ 2022年 ギュットクルーム EX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-ELFE033 パナソニックフェア","ギュットクルーム EX"),そのときの$jitensha:16
+)

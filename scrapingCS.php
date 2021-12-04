@@ -57,7 +57,7 @@ $ECsiteList=array(
 		//一律で置き換え、トリムできないパターンはこちらで処理する。
 		//車種確定用
 		"modifi"=>array(
-			"tableName"=>"shashuIndex",	//車種確定用のテーブル名
+			"tableName"=>"shashuIndexCS",	//車種確定用のテーブル名
 			"subjectName"=>"mongon",		//車種確定時の正規表現対象subject名
 			"addColum"=>"index_no",		//車種確定時の追加コラム名
 			"patternKey"=>array("seikihyougen_name","seikihyougen_year")	//同じく車種確定時のパターンキー。複数ある場合foreachで回して先行先読みでAND化
@@ -65,7 +65,7 @@ $ECsiteList=array(
 		
 	)
 );
-$outputData="no,href,mongon,price\n";
+$outputData="no,href,mongon,price,index_no\n";
 
 $siteGet=new siteGet();
 $putCsv=new putCsv();

@@ -42,8 +42,8 @@ class	putPrintR{
 }
 
 
-
 //車種確定()
+//車種確定は一度確定するとbreakで次の車種に飛ぶので正規表現は長いものを先にすることを忘れないこと。
 class	shashuKakutei{
 	public	$inputArray;
 	public	$indexArrayKeyColum;
@@ -67,8 +67,9 @@ class	shashuKakutei{
 
 	function	go(){
 		$tableName=$this->shashuIndexTableName;
+		$patternKey=$this->modificationPatternKey;	//ここではソート用として使う
 		//車種インデックス読み込み
-		$this->shashuIndex=$this->db->readAll($tableName);
+		$this->shashuIndex=$this->db->readAll($tableName,$patternKey);
 		$shashuIndex=$this->shashuIndex;
 
 		//スクレイピング結果と車種インデックスの連携その1(テスト)php上で変数で行なう
@@ -79,32 +80,53 @@ class	shashuKakutei{
 		$inputArrayKeyColum=$this->inputArrayKeyColum;
 		$modificationPatternKey=$this->modificationPatternKey;
 		$modifiLog="";
+		$putPrintR=new putPrintR();
+		$matchCommand=array();
 
 		foreach(	$inputArray	as	$i	=>	$ob	){
 			$subject=$ob[$inputArrayKeyColum];
 
 			foreach(	$shashuIndex	as	$jitensha	){	
-				
-				//preg_match用パターン作成
-				$pattern="/";
-				foreach(	$modificationPatternKey	as	$j	){
+				//新規判定ルーチン(if文)
+				foreach(	$modificationPatternKey	as	$key => $j	){
 					$keyBit=$jitensha[$j];
-					$pattern=$pattern."(?=.*".$keyBit.")";
-
-				};
-				$pattern=$pattern."/ius";
+					$pattern="/".$keyBit."/ius";
 
 
-				if(	preg_match($pattern,$subject,$match)	){
-					//print $key."\r\n";	
-					//print_r($inputArray[$i]);
-					//print_r(	array($addColum=>$jitensha[$addColum])	);
-					$inputArray[$i]+=array(	$addColum=>$jitensha[$addColum]	);
-					break;
+					//preg_matchと同時に$match[0]に内容がある(全部のパターン合致している)ことを確認する。
+					if(	preg_match($pattern,$subject,$match)	){
+						if(	isset($match[0])	){
+
+
+							//デバグ用
+							$matchCommand[]="preg_match(\"".$pattern."\",\"".$subject."\",\"".$match[0]."\"),そのときの\$jitensha:".$jitensha[$addColum];
+
+							//配列の最後判定、foreachが回りきってるということ(array_key_lastがphp7.3以降でしか使えないことに注意)
+							if(	$key === array_key_last($modificationPatternKey)	){
+								//車種確定フラグたて
+								$inputArray[$i]=array(	$addColum=>$jitensha[$addColum]	);
+
+								//デバグ用
+								$matchCommand[]="フラグ！！！！\r\n";
+								break 2;									//確定すると次の車種に飛ぶ
+
+							}
+						}else{
+							break;
+						}
+					}else{
+						break;
+					}
 				}
 			}
-			
 		}
+
+		//デバグ用
+		$putPrintR->array=$matchCommand;
+		$putPrintR->filename="matchCommandList.txt";
+		$putPrintR->go();
+
+
 		return $inputArray;
 	}
 }		
@@ -213,8 +235,22 @@ class	db{
 	}
 	//読込、指定テーブル名のfetchAllを結果として吐き出す。
 	//そもそもfetchAllを大分忘れているのでおためし用
-	function	readAll($tableName){
-		$query='SELECT * FROM '.$tableName;
+	function	readAll($tableName,$sortColumn){
+		if(	is_array($sortColumn)	){									//ソート用のカラムが配列(複数だった場合)
+			$query2="";
+			foreach($sortColumn	as $str){
+				$query2=$query2."LENGTH(".$str.") DESC,";
+			}
+			$query2=rtrim($query2,",");
+		}else{
+			$query2="LENGTH(".$sortColumn.") DESC";	//ソート用のカラムが文字列だった場合。それ以外は面倒だから判別しない
+		}
+
+			
+		$query='SELECT * FROM '.$tableName." ORDER BY ".$query2;
+		print $query;
+		print "\r\n";
+
 		$stmt=$this->PDO->query($query);
 		$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
 		return $result;

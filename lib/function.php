@@ -104,7 +104,7 @@ class	shashuKakutei{
 							//配列の最後判定、foreachが回りきってるということ(array_key_lastがphp7.3以降でしか使えないことに注意)
 							if(	$key === array_key_last($modificationPatternKey)	){
 								//車種確定フラグたて
-								$inputArray[$i]=array(	$addColum=>$jitensha[$addColum]	);
+								$inputArray[$i]+=array(	$addColum=>$jitensha[$addColum]	);
 
 								//デバグ用
 								$matchCommand[]="フラグ！！！！\r\n";

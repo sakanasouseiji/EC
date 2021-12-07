@@ -20,6 +20,7 @@ Array
             [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460191109010&ccd=F1000544&wkcd=F1000510-F1000518
             [mongon] => ヤマハ 電動自転車 子供乗せ 2020 パス バビー アンリヤチャイルドシート標準装備 YAMAHA 12.3h 3段変速 PA20EGXB0J
             [price] => 134200
+            [index_no] => 6
         )
 
     [3] => Array
@@ -96,41 +97,13 @@ Array
 
     [12] => Array
         (
-            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211016025&ccd=F1000544&wkcd=F1000510-F1000518
-            [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットアニーズ DX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-ELAD033 パナソニックフェア
-            [price] => 148500
-        )
-
-    [13] => Array
-        (
-            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211017015&ccd=F1000544&wkcd=F1000510-F1000518
-            [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットアニーズ DX26 Panasonic 26インチ 16Ah 3段変速 オートライト  BE-ELAD633 パナソニックフェア
-            [price] => 148500
-        )
-
-    [14] => Array
-        (
-            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404201002014&ccd=F1000544&wkcd=F1000510-F1000518
-            [mongon] => パナソニック 電動自転車 2021年 ギュット クルーム DX Panasonic 20インチ 	16Ah 3段変速 オートライト BE-ELFD032A
-            [price] => 148799
-            [index_no] => 17
-        )
-
-    [15] => Array
-        (
-            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460211010012&ccd=F1000544&wkcd=F1000510-F1000518
-            [mongon] => ヤマハ 電動自転車 2022年 パス バビー アン スーパー リヤチャイルドシート標準装備モデル YAMAHA 20インチ 15.4Ah 3段変速 オートライト  PA20GGSB2J
-            [price] => 150700
-        )
-
-    [16] => Array
-        (
             [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211015059&ccd=F1000544&wkcd=F1000510-F1000518
             [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットクルームR DX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-FRD031 パナソニックフェア
             [price] => 152900
+            [index_no] => 24
         )
 
-    [17] => Array
+    [13] => Array
         (
             [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460201010060&ccd=F1000544&wkcd=F1000510-F1000518
             [mongon] => ヤマハ 電動自転車 2021年 パス キス ミニ アン スーパー YAMAHA 20インチ 	15.4Ah 3段変速 PAS Kiss mini un SP PA20FGSK1J
@@ -138,14 +111,7 @@ Array
             [index_no] => 3
         )
 
-    [18] => Array
-        (
-            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460211012016&ccd=F1000544&wkcd=F1000510-F1000518
-            [mongon] => ヤマハ 電動自転車 2022年 パス キッス ミニ アン スーパー YAMAHA 20インチ 15.4Ah 3段変速 オートライト  PA20GGSK2J
-            [price] => 159500
-        )
-
-    [19] => Array
+    [14] => Array
         (
             [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443200108013&ccd=F1000544&wkcd=F1000510-F1000518
             [mongon] => ブリヂストン 電動自転車 子供乗せ ハイディー2 ブリジストン BRIDGESTONE 9.9Ah 3段変速 オートライト HY6B40
@@ -153,15 +119,7 @@ Array
             [index_no] => 13
         )
 
-    [20] => Array
-        (
-            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404191103036&ccd=F1000544&wkcd=F1000510-F1000518
-            [mongon] => パナソニック 電動自転車 子供乗せ ギュット クルームR EX Panasonic16.0Ah 3段変速 BE-ELRE03
-            [price] => 159500
-            [index_no] => 14
-        )
-
-    [21] => Array
+    [15] => Array
         (
             [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460201012026&ccd=F1000544&wkcd=F1000510-F1000518
             [mongon] => ヤマハ 電動自転車 2021年 パス クルー YAMAHA 24インチ 15.4Ah 3段変速 PAS Crew PA24CGC1J
@@ -169,33 +127,28 @@ Array
             [index_no] => 5
         )
 
-    [22] => Array
+    [16] => Array
         (
             [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211013031&ccd=F1000544&wkcd=F1000510-F1000518
             [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットクルーム DX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-ELFD033 パナソニックフェア
             [price] => 162800
+            [index_no] => 26
         )
 
-    [23] => Array
-        (
-            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404201001017&ccd=F1000544&wkcd=F1000510-F1000518
-            [mongon] => パナソニック 電動自転車 2021年 ギュット クルーム EX Panasonic 20インチ 	16Ah 3段変速 オートライト BE-ELFE032A
-            [price] => 164799
-            [index_no] => 16
-        )
-
-    [24] => Array
+    [17] => Array
         (
             [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211014069&ccd=F1000544&wkcd=F1000510-F1000518
             [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットクルームR EX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-FRE031 パナソニックフェア
             [price] => 173800
+            [index_no] => 27
         )
 
-    [25] => Array
+    [18] => Array
         (
             [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211012010&ccd=F1000544&wkcd=F1000510-F1000518
             [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットクルーム EX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-ELFE033 パナソニックフェア
             [price] => 179300
+            [index_no] => 28
         )
 
 )

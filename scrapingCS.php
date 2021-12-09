@@ -4,7 +4,7 @@ require_once("./lib/scraping.php");
 require_once("./lib/function.php");
 
 //dbパラメーター
-require_once($_SERVER["DOCUMENT_ROOT"]."dbPath/scrapingDBParameter.php");
+require_once("dbPath/scrapingDBParameter.php");
 //スクレイピングの実行サンプル。例としてサイクルスポットを使う
 //備忘録
 //サイトurlを指定してスクレイピング
@@ -62,10 +62,15 @@ $ECsiteList=array(
 			"addColum"=>"index_no",		//車種確定時の追加コラム名
 			"patternKey"=>array("seikihyougen_name","seikihyougen_year")	//同じく車種確定時のパターンキー。複数ある場合foreachで回して先行先読みでAND化
 		),
+		//書き込みdb、テーブル名,付随情報
+		"record"=array(
+			"tableName"=>"CycleSpotScrapingResult",		//テーブル名
+			"dateFlag"=>true							//日付情報の追加
+		)
 		
 	)
 );
-$outputData="no,href,mongon,price,index_no\n";
+$outputData="no,href,mongon,price,index_no\r\n";
 
 $siteGet=new siteGet();
 $putCsv=new putCsv();
@@ -84,7 +89,8 @@ foreach($ECsiteList as $EC){
 	$shashuKakutei->db=$db;		//db
 	$shashuKakutei->shashuIndexTableName=$EC["modifi"]["tableName"];	//車種インデックステーブル名
 	$shashuKakutei->modificationPatternKey=$EC["modifi"]["patternKey"];	//車種インデックスで利用するキー
-	$shashuKakutei->addColum=$EC["modifi"]["addColum"];	//車種インデックスで紐付けするカラム
+	$shashuKakutei->addColum=$EC["modifi"]["addColum"];					//車種インデックスで紐付けするカラム
+	$shashuKakutei->record=$EC["record"];								//db書き込み情報
 	$result=$shashuKakutei->go();
 	$index=$shashuKakutei->shashuIndex;	//車種インデックス出力(デバグ用)
 

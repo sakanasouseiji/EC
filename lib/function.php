@@ -17,7 +17,7 @@ class	putCsv{
 			foreach($kobetu	as $key => $i){
 				$outputData=$outputData.",".$i;
 			}
-			$outputData=$outputData."\n";
+			$outputData=$outputData."\r\n<p>";
 		}
 	$result=file_put_contents($filename,var_export($outputData,true)	);
 	print $outputData;
@@ -32,9 +32,12 @@ class	putPrintR{
 		$array=$this->array;
 		$filename=$this->filename;
 
+
 		//本体ここから
+		print "<pre>";
 		$txt=print_r($array,true);
 		file_put_contents($filename,$txt);
+		print "</pre>";
 		//ここまで
 
 		return;
@@ -53,6 +56,7 @@ class	shashuKakutei{
 	public	$modificationPatternKey;
 	public	$addColum;
 	public	$db;
+	public	$record;
 
 	//事前準備
 	function	__construct($db){
@@ -99,7 +103,7 @@ class	shashuKakutei{
 
 
 							//デバグ用
-							$matchCommand[]="preg_match(\"".$pattern."\",\"".$subject."\",\"".$match[0]."\"),そのときの\$jitensha:".$jitensha[$addColum];
+							//$matchCommand[]="preg_match(\"".$pattern."\",\"".$subject."\",\"".$match[0]."\"),そのときの\$jitensha:".$jitensha[$addColum];
 
 							//配列の最後判定、foreachが回りきってるということ(array_key_lastがphp7.3以降でしか使えないことに注意)
 							if(	$key === array_key_last($modificationPatternKey)	){
@@ -107,7 +111,8 @@ class	shashuKakutei{
 								$inputArray[$i]+=array(	$addColum=>$jitensha[$addColum]	);
 
 								//デバグ用
-								$matchCommand[]="フラグ！！！！\r\n";
+								//$matchCommand[]="フラグ！！！！\r\n";
+
 								break 2;									//確定すると次の車種に飛ぶ
 
 							}
@@ -122,9 +127,16 @@ class	shashuKakutei{
 		}
 
 		//デバグ用
+		//
+		/*
 		$putPrintR->array=$matchCommand;
 		$putPrintR->filename="matchCommandList.txt";
 		$putPrintR->go();
+		*/
+
+		//db書き込み
+
+
 
 
 		return $inputArray;
@@ -230,7 +242,7 @@ class	db{
 			print $error->getMessage();
 			return false;
 		}
-		print "connect complete\r\n";
+		print "connect complete\r\n<p>";
 		return true;
 	}
 	//読込、指定テーブル名のfetchAllを結果として吐き出す。
@@ -249,7 +261,7 @@ class	db{
 			
 		$query='SELECT * FROM '.$tableName." ORDER BY ".$query2;
 		print $query;
-		print "\r\n";
+		print "\r\n<p>";
 
 		$stmt=$this->PDO->query($query);
 		$result=$stmt->fetchAll(PDO::FETCH_ASSOC);

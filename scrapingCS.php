@@ -63,9 +63,10 @@ $ECsiteList=array(
 			"patternKey"=>array("seikihyougen_name","seikihyougen_year")	//同じく車種確定時のパターンキー。複数ある場合foreachで回して先行先読みでAND化
 		),
 		//書き込みdb、テーブル名,付随情報
-		"record"=array(
+		"recordTable"=>array(
 			"tableName"=>"CycleSpotScrapingResult",		//テーブル名
-			"dateFlag"=>true							//日付情報の追加
+			"dateFlag"=>true,							//日付情報の追加
+			"outputDataColumn"=array("no","href","mongon","price","index_no")	//inputArrayを収めるdbカラム。"recordDate"はdateFlagが立っている場合に備えておく
 		)
 		
 	)
@@ -90,7 +91,7 @@ foreach($ECsiteList as $EC){
 	$shashuKakutei->shashuIndexTableName=$EC["modifi"]["tableName"];	//車種インデックステーブル名
 	$shashuKakutei->modificationPatternKey=$EC["modifi"]["patternKey"];	//車種インデックスで利用するキー
 	$shashuKakutei->addColum=$EC["modifi"]["addColum"];					//車種インデックスで紐付けするカラム
-	$shashuKakutei->record=$EC["record"];								//db書き込み情報
+	$shashuKakutei->recordTable=$EC["recordTable"];								//db書き込み情報
 	$result=$shashuKakutei->go();
 	$index=$shashuKakutei->shashuIndex;	//車種インデックス出力(デバグ用)
 

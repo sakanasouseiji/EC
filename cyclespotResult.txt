@@ -1,0 +1,154 @@
+Array
+(
+    [0] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0422201007037&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => 丸石サイクル 電動自転車 子供乗せ 2021 ふらっかーずココッティアシスト マルイシ maruishi 20インチ 10.4Ah 3段変速 オートライト  ASFRR203Y
+            [price] => 127380
+            [index_no] => 2
+        )
+
+    [1] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0447180501024&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => 店頭受取限定 自転車 後チャイルドシート ふたごじてんしゃ 2019年製Ver. ふたごじてんしゃ OGK 18/16インチ 3段変速 オートライト  TWB-001
+            [price] => 132000
+        )
+
+    [2] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460191109010&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ヤマハ 電動自転車 子供乗せ 2020 パス バビー アンリヤチャイルドシート標準装備 YAMAHA 12.3h 3段変速 PA20EGXB0J
+            [price] => 134200
+            [index_no] => 6
+        )
+
+    [3] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460201011029&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ヤマハ 電動自転車 2021年 パス キッス ミニ アン YAMAHA 20インチ 12.3Ah 3段変速 PAS Kiss mini un PA20FGXK1J
+            [price] => 137497
+            [index_no] => 4
+        )
+
+    [4] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404191014042&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => パナソニック 電動自転車 子供乗せ ギュット アニーズ DX Panasonic 20インチ 16.0Ah 3段変速 BE-ELAD032
+            [price] => 137799
+            [index_no] => 19
+        )
+
+    [5] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443200901058&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ブリヂストン 電動自転車 子供乗せ アシスタC STD ブリジストン BRIDGESTONE 20インチ 12.3Ah 3段変速 オートライト CC0C31
+            [price] => 138380
+            [index_no] => 12
+        )
+
+    [6] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460201009019&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ヤマハ 電動自転車 2021年 パス バビー アン スーパー YAMAHA 20インチ 15.4Ah 3段変速 PAS Babby un SP PA20FGSB1J
+            [price] => 138600
+            [index_no] => 7
+        )
+
+    [7] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404191104026&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => パナソニック 電動自転車 子供乗せ ギュット クルームR DX Panasonic 16Ah 3段変速 オートライト BE-ELRD03
+            [price] => 138600
+            [index_no] => 15
+        )
+
+    [8] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404191015025&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => パナソニック 電動自転車 子供乗せ ギュット アニーズ DX26 Panasonic 16.0Ah 3段変速 オートライト BE-ELAD632
+            [price] => 138600
+            [index_no] => 18
+        )
+
+    [9] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443191013068&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ブリヂストン 電動自転車 子供乗せ ビッケポーラー bikke POLARR e ブリジストン BRIDGESTONE 15.4Ah 3段変速 BP0C40
+            [price] => 139700
+            [index_no] => 10
+        )
+
+    [10] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443191012030&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ブリヂストン 電動自転車 子供乗せ ビッケグリ bikke GRI ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BG0B40
+            [price] => 143000
+            [index_no] => 11
+        )
+
+    [11] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443191011026&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ブリヂストン 電動自転車 子供乗せ ビッケモブ bikke MOB ブリジストン BRIDGESTONE 14.3Ah 3段変速 オートライト BM0B40
+            [price] => 143000
+            [index_no] => 9
+        )
+
+    [12] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211015059&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットクルームR DX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-FRD031 パナソニックフェア
+            [price] => 152900
+            [index_no] => 24
+        )
+
+    [13] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460201010060&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ヤマハ 電動自転車 2021年 パス キス ミニ アン スーパー YAMAHA 20インチ 	15.4Ah 3段変速 PAS Kiss mini un SP PA20FGSK1J
+            [price] => 153780
+            [index_no] => 3
+        )
+
+    [14] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0443200108013&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ブリヂストン 電動自転車 子供乗せ ハイディー2 ブリジストン BRIDGESTONE 9.9Ah 3段変速 オートライト HY6B40
+            [price] => 159500
+            [index_no] => 13
+        )
+
+    [15] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0460201012026&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => ヤマハ 電動自転車 2021年 パス クルー YAMAHA 24インチ 15.4Ah 3段変速 PAS Crew PA24CGC1J
+            [price] => 159830
+            [index_no] => 5
+        )
+
+    [16] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211013031&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットクルーム DX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-ELFD033 パナソニックフェア
+            [price] => 162800
+            [index_no] => 26
+        )
+
+    [17] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211014069&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットクルームR EX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-FRE031 パナソニックフェア
+            [price] => 173800
+            [index_no] => 27
+        )
+
+    [18] => Array
+        (
+            [url] => https://cyclespot.jp/store/ProductDetail.aspx?pcd=0404211012010&ccd=F1000544&wkcd=F1000510-F1000518
+            [mongon] => パナソニック 電動自転車 子供乗せ 2022年 ギュットクルーム EX Panasonic 20インチ 16Ah 3段変速 オートライト  BE-ELFE033 パナソニックフェア
+            [price] => 179300
+            [index_no] => 28
+        )
+
+)

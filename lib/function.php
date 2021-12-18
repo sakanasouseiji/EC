@@ -56,7 +56,7 @@ class	shashuKakutei{
 	public	$modificationPatternKey;
 	public	$addColum;
 	public	$db;
-	public	$record;
+	public	$recordTable;
 
 	//事前準備
 	function	__construct($db){
@@ -134,12 +134,15 @@ class	shashuKakutei{
 		$putPrintR->go();
 		*/
 
-		//db書き込み
+		//db書き込みの前準備
+		//
 
 
+		$recordTable=$this->recordTable;
+		$result=$db->wrightAll($recordTable,$inputArray);
+		
 
-
-		return $inputArray;
+		return $result;
 	}
 }		
 			//スクレイピング結果と車種インデックスの連携その2(テスト)mysql上で行なう
@@ -247,6 +250,7 @@ class	db{
 	}
 	//読込、指定テーブル名のfetchAllを結果として吐き出す。
 	//そもそもfetchAllを大分忘れているのでおためし用
+	//正規表現のチェックのためのsortなので基本DESC(そしてチェック後はループを抜ける)
 	function	readAll($tableName,$sortColumn){
 		if(	is_array($sortColumn)	){									//ソート用のカラムが配列(複数だった場合)
 			$query2="";
@@ -268,34 +272,55 @@ class	db{
 		return $result;
 	}
 
-	//全書き込み、指定配列を書き込む
+	//全書き込み、指定配列をテーブルに書き込む
+	//
 	//引数がひとつだけの場合は
-	function	wrightAll($table=null,$inputArray=null){
+	function	wrightAll($recordTable=null,$inputArray=null){
 
 		//引数チェック
-		if(	is_null($table)	){
-			if(	is_null($inputArray)	){
-				//引数が両方とも設定されていない場合
-				print "no parameter error!!\r\n";
-				exit();
-			}
-		}
-
-
-		if(	!is_array($table)	){
-			//引数に配列が設定されている場合(inputArrayだけ設定されている)
-			$table=$this->wrightAllTableName;
-
-		}else{
-			//引数が配列以外の場合(tableの場合)	*
+		if(	is_null($recordTable)	||	is_null($inputArray)	){
+			//引数が設定されていない場合
 			print "no parameter error!!\r\n";
 			exit();
 		}
 
+		$tableName=$recordTable["tableName"];
+		$dateFlag=$recordTable["dateFlag"];
+		$outputDataColumn=$recordTable["outputDataColumn"];
+
+
+		if(	is_bool($dateFlag)	&&	$dateFlag===true	){
+			$recordDateColumn="recordDate";					//当日日付カラム(カラム名は固定)
+			$today="CURDATE()"					//当日日付。
+		}
+
+		//
+		foreach(	$inputArray	as	$jitenshaData	){
+			$stmt=$this->makeInsertStmt($tableName,$outputDateColumn);
+		}
+		$exArray=array_combine($outputDataColumn,$jitenshaData);
+		if(	exArray===false	){
+			print "array_combine error!\r\n";
+			exit();
+		}
+		$stmt->execute($exArray);
 
 
 	}
-
+	
+	//INSERT文を作るだけのメソッド
+	function	makeInsertStmt($tableName,$outputDataColumn){
+		$stmt="INSERT INTO ".$tableName." (";
+		foreach(	$outputDataColumn	as	$i	){
+			$stmt=$stmt.$i.",";
+		}
+		$stmt=rtrim($stmt,",").") VALUES("
+		foreach(	$outputDataColumn	as	$j	){
+			$stmt=$stmt.":".$j.",";
+		}
+		$stmt=rtrim($stmt,",").")";
+		return $stmt;	
+	}
 
 
 	//dbクローズ

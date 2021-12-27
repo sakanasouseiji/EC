@@ -64,9 +64,9 @@ $ECsiteList=array(
 		),
 		//書き込みdb、テーブル名,付随情報
 		"recordTable"=>array(
-			"tableName"=>"CycleSpotScrapingResult",		//テーブル名
+			"tableName"=>"cyclespotScrapingResult",		//テーブル名
 			"dateFlag"=>true,							//日付情報の追加
-			"outputDataColumn"=array("no","href","mongon","price","index_no")	//inputArrayを収めるdbカラム。"recordDate"はdateFlagが立っている場合に備えておく
+			"outputDataColumn"=>array("href","mongon","price","index_no")	//inputArrayを収めるdbカラム。"recordDate"はdateFlagが立っている場合に備えておく
 		)
 		
 	)

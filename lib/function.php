@@ -17,7 +17,7 @@ class	putCsv{
 			foreach($kobetu	as $key => $i){
 				$outputData=$outputData.",".$i;
 			}
-			$outputData=$outputData."\r\n<p>";
+			$outputData=$outputData."\r\n";
 		}
 	$result=file_put_contents($filename,var_export($outputData,true)	);
 	print $outputData;
@@ -57,6 +57,7 @@ class	shashuKakutei{
 	public	$addColum;
 	public	$db;
 	public	$recordTable;
+	public	$putPrintR;
 
 	//事前準備
 	function	__construct($db){
@@ -84,8 +85,9 @@ class	shashuKakutei{
 		$inputArrayKeyColum=$this->inputArrayKeyColum;
 		$modificationPatternKey=$this->modificationPatternKey;
 		$modifiLog="";
-		$putPrintR=new putPrintR();
+		$putPrintR=$this->putPrintR;
 		$matchCommand=array();
+		$this->putPrintR=new putPrintR();
 
 		foreach(	$inputArray	as	$i	=>	$ob	){
 			$subject=$ob[$inputArrayKeyColum];
@@ -139,7 +141,7 @@ class	shashuKakutei{
 
 
 		$recordTable=$this->recordTable;
-		$result=$db->wrightAll($recordTable,$inputArray);
+		$result=$this->db->wrightAll($recordTable,$inputArray);
 		
 
 		return $result;
@@ -205,7 +207,8 @@ class	db{
 		$this->wrightAllInputArray=null;	//デフォでnull。
 		//全書き込みデフォルトテーブル名設定
 		$today=$this->dt->format("Ymd");
-		$this->wrightAllTaleName="uknown".$today;	//未設定の場合の既定テーブル名
+		$this->wrightAllTableName="uknown".$today;	//未設定の場合の既定テーブル名
+		$this->putPrintR=new putPrintR();
 
 	}
 	
@@ -245,7 +248,7 @@ class	db{
 			print $error->getMessage();
 			return false;
 		}
-		print "connect complete\r\n<p>";
+		print "connect complete\r\n";
 		return true;
 	}
 	//読込、指定テーブル名のfetchAllを結果として吐き出す。
@@ -265,7 +268,7 @@ class	db{
 			
 		$query='SELECT * FROM '.$tableName." ORDER BY ".$query2;
 		print $query;
-		print "\r\n<p>";
+		print "\r\n";
 
 		$stmt=$this->PDO->query($query);
 		$result=$stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -276,6 +279,8 @@ class	db{
 	//
 	//引数がひとつだけの場合は
 	function	wrightAll($recordTable=null,$inputArray=null){
+		$PDO=$this->PDO;
+		$putPrintR=$this->putPrintR;
 
 		//引数チェック
 		if(	is_null($recordTable)	||	is_null($inputArray)	){
@@ -288,38 +293,55 @@ class	db{
 		$dateFlag=$recordTable["dateFlag"];
 		$outputDataColumn=$recordTable["outputDataColumn"];
 
-
 		if(	is_bool($dateFlag)	&&	$dateFlag===true	){
 			$recordDateColumn="recordDate";					//当日日付カラム(カラム名は固定)
-			$today="CURDATE()"					//当日日付。
+			$today="CURDATE()";					//当日日付。
 		}
 
 		//
 		foreach(	$inputArray	as	$jitenshaData	){
-			$stmt=$this->makeInsertStmt($tableName,$outputDateColumn);
+
+			$sql=$this->makeInsertStmt($tableName,$outputDataColumn);
+			$stmt=$PDO->prepare($sql);
+
+
+			$putPrintR->array=$outputDataColumn;
+			$putPrintR->filename="outputDataColumn.txt";
+			$putPrintR->go();
+
+			$putPrintR->array=$jitenshaData;
+			$putPrintR->filename="jitenshaData.txt";
+			$putPrintR->go();
+
+
+			$exArray=array_combine($outputDataColumn,$jitenshaData);
+			
+
+			if(	$exArray==false	){
+				print "array_combine error!\r\n";
+				exit();
+			}
+			$result=$stmt->execute($exArray);
 		}
-		$exArray=array_combine($outputDataColumn,$jitenshaData);
-		if(	exArray===false	){
-			print "array_combine error!\r\n";
-			exit();
-		}
-		$stmt->execute($exArray);
+
+		return $result;
 
 
 	}
 	
 	//INSERT文を作るだけのメソッド
 	function	makeInsertStmt($tableName,$outputDataColumn){
-		$stmt="INSERT INTO ".$tableName." (";
+		$sql="INSERT INTO ".$tableName." (";
 		foreach(	$outputDataColumn	as	$i	){
-			$stmt=$stmt.$i.",";
+			$sql=$sql.$i.",";
 		}
-		$stmt=rtrim($stmt,",").") VALUES("
+		$sql=rtrim($sql,",").") VALUES(";
 		foreach(	$outputDataColumn	as	$j	){
-			$stmt=$stmt.":".$j.",";
+			$sql=$sql.":".$j.",";
 		}
-		$stmt=rtrim($stmt,",").")";
-		return $stmt;	
+		$sql=rtrim($sql,",").")";
+		print $sql."\r\n";
+		return $sql;	
 	}
 
 

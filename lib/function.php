@@ -34,10 +34,10 @@ class	putPrintR{
 
 
 		//本体ここから
-		print "<pre>";
+		//print "<pre>";
 		$txt=print_r($array,true);
 		file_put_contents($filename,$txt);
-		print "</pre>";
+		//print "</pre>";
 		//ここまで
 
 		return;
@@ -125,7 +125,7 @@ class	shashuKakutei{
 						break;
 					}
 				}
-				$inputArray[$i]+=array(	$addColum=>0	);					//ループがまわり切った場合(該当車種がなかった場合0を入れる)
+				//$inputArray[$i]+=array(	$addColum=>0	);					//ループがまわり切った場合(該当車種がなかった場合0を入れる)
 			}
 		}
 
@@ -314,6 +314,13 @@ class	db{
 			$putPrintR->filename="jitenshaData.txt";
 			$putPrintR->go();
 
+
+			//デバグ用if文
+			if(	!array_key_exists("index_no",$jitenshaData)	){
+				$jitenshaData+=array("index_no"=>0);
+			}
+			//print_r($jitenshaData);
+			//ここまでデバグ用if文
 
 			$exArray=array_combine($outputDataColumn,$jitenshaData);
 			

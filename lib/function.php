@@ -125,6 +125,7 @@ class	shashuKakutei{
 						break;
 					}
 				}
+				$inputArray[$i]+=array(	$addColum=>0	);					//ループがまわり切った場合(該当車種がなかった場合0を入れる)
 			}
 		}
 

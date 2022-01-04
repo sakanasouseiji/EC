@@ -145,7 +145,7 @@ class	shashuKakutei{
 		$result=$this->db->wrightAll($recordTable,$inputArray);
 		
 
-		return $result;
+		return $inputArray;
 	}
 }		
 			//スクレイピング結果と車種インデックスの連携その2(テスト)mysql上で行なう
@@ -302,10 +302,10 @@ class	db{
 		//
 		foreach(	$inputArray	as	$jitenshaData	){
 
-			$sql=$this->makeInsertStmt($tableName,$outputDataColumn);
+			$sql=$this->makeInsertStmt($tableName,$dateFlag,$outputDataColumn);
 			$stmt=$PDO->prepare($sql);
 
-
+			/*
 			$putPrintR->array=$outputDataColumn;
 			$putPrintR->filename="outputDataColumn.txt";
 			$putPrintR->go();
@@ -313,14 +313,17 @@ class	db{
 			$putPrintR->array=$jitenshaData;
 			$putPrintR->filename="jitenshaData.txt";
 			$putPrintR->go();
+			*/
 
 
-			//デバグ用if文
+			//index_noが無い(車種確定ができなかった)ものには0をつけてやる
+			//↑暫定処理
 			if(	!array_key_exists("index_no",$jitenshaData)	){
 				$jitenshaData+=array("index_no"=>0);
 			}
 			//print_r($jitenshaData);
-			//ここまでデバグ用if文
+			//ここまで暫定処理
+
 
 			$exArray=array_combine($outputDataColumn,$jitenshaData);
 			
@@ -338,17 +341,30 @@ class	db{
 	}
 	
 	//INSERT文を作るだけのメソッド
-	function	makeInsertStmt($tableName,$outputDataColumn){
+	function	makeInsertStmt($tableName,$dateFlag,$outputDataColumn){
 		$sql="INSERT INTO ".$tableName." (";
+		if(	$dateFlag===true	){
+			$outputDataColumn[]="YMD";
+		}
+
+
 		foreach(	$outputDataColumn	as	$i	){
 			$sql=$sql.$i.",";
 		}
 		$sql=rtrim($sql,",").") VALUES(";
+
 		foreach(	$outputDataColumn	as	$j	){
-			$sql=$sql.":".$j.",";
+			if(	$j!="YMD"	){
+				$sql=$sql.":".$j.",";
+			}else{
+				$sql=$sql."CURDATE(),";
+			}
+
 		}
 		$sql=rtrim($sql,",").")";
-		print $sql."\r\n";
+
+		//print $sql."\r\n";
+
 		return $sql;	
 	}
 

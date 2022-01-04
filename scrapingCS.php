@@ -65,8 +65,8 @@ $ECsiteList=array(
 		//書き込みdb、テーブル名,付随情報
 		"recordTable"=>array(
 			"tableName"=>"cyclespotScrapingResult",		//テーブル名
-			"dateFlag"=>true,							//日付情報の追加
-			"outputDataColumn"=>array("href","mongon","price","index_no")	//inputArrayを収めるdbカラム。"recordDate"はdateFlagが立っている場合に備えておく
+			"dateFlag"=>true,							//日付情報の追加,フラグを立てると別途カラム「YMD」にINSERT当日の日付を入れる
+			"outputDataColumn"=>array("href","mongon","price","index_no")	//inputArrayを収めるdbカラム。"YMD"はdateFlagが立っている場合に備えて使用禁止。
 		)
 		
 	)

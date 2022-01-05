@@ -784,6 +784,40 @@ Array
 
     [23] => Array
         (
+            [index_no] => 20
+            [maker] => パナソニック
+            [series] => ギュット
+            [name] => ギュット・アニーズ・DX
+            [gentei_flag] => 0
+            [shinaban] => BE-ELAD033
+            [hatubai] => 2022年12月
+            [year] => 2022
+            [tannitu_shouhin_flag] => 0
+            [frame_size] => 
+            [tire_size] => 20
+            [tannitu_tire_size_flag] => 1
+            [tire_size_shousai] => 20×2.125 HE
+            [kibou_kouri_kakaku] => 145273
+            [volt] => 25.2
+            [ampere] => 16
+            [weight] => 34.4
+            [eco_mode_range] => 80
+            [auto_mode_range] => 60
+            [power_mode_range] => 50
+            [hensoku] => 内装3段
+            [saitei_tekiou_sinchou] => 142
+            [konose_saitei_sinchou] => 155
+            [saddle_height] => 735
+            [rear_carrier] => クラス27標準装備
+            [teishou_frame_flag] => 1
+            [maerin_kudou_flag] => 0
+            [touroku_date] => 2021-12-04
+            [seikihyougen_year] => 2022|ELAD033
+            [seikihyougen_name] => ギュット[\s]?アニーズ[\s]?dx
+        )
+
+    [24] => Array
+        (
             [index_no] => 28
             [maker] => パナソニック
             [series] => ギュット
@@ -814,40 +848,6 @@ Array
             [touroku_date] => 2021-12-07
             [seikihyougen_year] => 2022|ELFE033
             [seikihyougen_name] => ギュット[\s]?クルーム[\s]?ex
-        )
-
-    [24] => Array
-        (
-            [index_no] => 20
-            [maker] => パナソニック
-            [series] => ギュット
-            [name] => ギュット・アニーズ・DX
-            [gentei_flag] => 0
-            [shinaban] => BE-ELAD033
-            [hatubai] => 2022年12月
-            [year] => 2022
-            [tannitu_shouhin_flag] => 0
-            [frame_size] => 
-            [tire_size] => 20
-            [tannitu_tire_size_flag] => 1
-            [tire_size_shousai] => 20×2.125 HE
-            [kibou_kouri_kakaku] => 145273
-            [volt] => 25.2
-            [ampere] => 16
-            [weight] => 34.4
-            [eco_mode_range] => 80
-            [auto_mode_range] => 60
-            [power_mode_range] => 50
-            [hensoku] => 内装3段
-            [saitei_tekiou_sinchou] => 142
-            [konose_saitei_sinchou] => 155
-            [saddle_height] => 735
-            [rear_carrier] => クラス27標準装備
-            [teishou_frame_flag] => 1
-            [maerin_kudou_flag] => 0
-            [touroku_date] => 2021-12-04
-            [seikihyougen_year] => 2022ELAD033
-            [seikihyougen_name] => ギュット[\s]?アニーズ[\s]?dx
         )
 
     [25] => Array

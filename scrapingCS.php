@@ -1,7 +1,8 @@
 <?php
 
-require_once("./lib/scraping.php");
-require_once("./lib/function.php");
+
+require_once(__DIR__."/lib/scraping.php");
+require_once(__DIR__."/lib/function.php");
 
 //dbパラメーター
 require_once("dbPath/scrapingDBParameter.php");
